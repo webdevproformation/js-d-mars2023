@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 19-suite-condition.html
+
+        const condition = false ;
+
+        if(condition){
+            console.log("condition est vérifiée") ;
+        }
+        // en + du mot clé false il y a 7 valeurs qui sont 
+        // transtypée / transformé par le mot clé false 
+        const a = 0 ; // falsy 
+
+        if( a ){ // a SANS faire de comparaison a => 0 => false 
+            console.log("condition")
+        }
+
+        // 7 valeurs qu'il faut connaître et qui sont transformés en false
+        // s'ils ne sont pas comparés avec d'autres valeurs 
+        // 0 -0 "" null undefined NaN false 
+        const b = null ;
+         
+        if(b){ // false     
+            console.log("condition 2");
+        }
+        // si une variable est égal n'importe quelle autre valeur 
+
+        const c = " "; 
+        if(c){
+            console.log("condition 3");
+        }
+
+        const d = []; // tableau vide est transtypé en true 
+        if(d){
+            console.log("condition 4");
+        }
+        // falsy 
+
+        let e ; // undefined créer la variable SANS l'affecter
+                //                             SANS lui donner une valeur
+
+        if (10 / 0){
+            console.log("verif")
+        }
+
+        // programme qui permet de faire de virement d'argent 
+        // compte => compte 
+        // verification ?? 
+        // argent sur le compte 
+        // dispose d'une carte 
+        // utilisé le site internet / guichet dans la rue 
+        // code saisit est correct ?? 
+
+        // logique => intelligence 
+        /* if(code == "123456" && montantCompte >= 10000 && banque == true ){
+            virement(10000);
+        } */
+
+        // je veux faire spaghetti
+        // condition pour pouvoir exécuter un code 
+        /* if(avoirPate == true && eauChaude == true && casserole == true){
+            faireDesSpaghetti() ; // 
+        }else {
+            console.log("toutes les conditions ne sont pas réunies") ; 
+        } */
+
+        /*
+            if(avoirPate == true && eauChaude == true && casserole == true){
+                faireDesSpaghetti()
+            }
+            else if(avoirPommeDeTerre == true && eauChaude == true && casserole == true){
+                faireDesLaPuree()
+            }else{
+                console.log("faire les courses")
+            }
+        */
+
+        const f = "10" ;
+
+        switch (f){ // react native => redux 
+            case 10 : // ne permet que de réaliser des comparaisons strictes 
+                console.log("condition 10") ;
+                break ;
+            case 20 :  // === 
+                console.log("condition 20") ;
+                break ;
+            default :
+                console.log("default")
+        }
+        if(f === 10){
+            console.log("condition 10") ;
+        }else if(f === 20){
+            console.log("condition 20") ;
+        }else {
+            console.log("default")
+        }
+    </script>
+</body>
+</html>
