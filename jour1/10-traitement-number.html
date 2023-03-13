@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 10-traitement-number.html
+        // pour les number il existe 6 opérations de base 
+        // addition / soustraction / division / multiplication / reste entier (modulo) / puissance 
+        const a = 10 ;
+        const b = 5 ;
+
+        console.log(a + b) ; // 15 addition
+        console.log(a - b ) ; // 5 soustraction
+        console.log( a / b ) ; // 2 division
+        console.log( a * b ) ; // 50 multiplication
+        console.log( a % b ) ; // 0 modulo 10 / 5 => 2 et il reste 0 entier 
+        console.log( 10 % 3 ) ; // 1 10 / 3 => 3 reste entier 1 => 3 * 3 + 1 = 10
+        console.log( a ** b ) ; // 10 * 10 * 10 * 10 * 10 = 100 000
+
+        // bizarrerie du javascript 
+
+        console.log( "prix " + 10 + " euro " ); // additionner string et number
+        console.log( "prix " + "10" + " euro " ); // javascript va tout transformer en string // prix 10 euro 
+        // addition => concaténation 
+
+        console.log( "prix" - 10 - " euros" );  // NaN => mot clé de javascript 
+        console.log( "prix" / 10 / " euros" );  // NaN => Not a Number 
+
+        console.log(1 / 0) ; // en mathématique erreur 
+                             // Infinity
+        console.log(-1.3 / 0) // -Infinity mot clé de Javascript comme const
+
+
+
+    </script>
+</body>
+</html>
