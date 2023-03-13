@@ -1,0 +1,36 @@
+Javascript présentation 
+
+langage qui a été créé dans les années 95
+
+=>  Brendan EICH
+
+=> initialement Javascript petit langage
+=> permettre de donner des indications sur "comment remplir les formulaire ?"
+Message d'erreur pour bloquer si l'information saisie n'est pas correcte ! 
+
+=> l'expansion d'internet => gens utilisent de + en + internet 
+=> le langage js est devenu de + en + important 
+=> Google / Yahoo / facebook => évoluer le langage javascript 
+
+=> en 1995 ECMAscript 
+=> en 2023 => Javascript ES6 (version 6 de javascript)
+=> (version publiée en 2015)
+
+=> langage livré DANS le navigateur (DANS firefox / DANS Chrome / DANS Egde )
+=> moteur javascript 
+
+=> JAVASCRIPT est un langage CLIENT 
+
+=> à partir de 2011 Javascript est aussi de venu un langage back / serveur 
+=> grâce NodeJS ( + tard )
+
+=> javascript => site internet / app mobile / logiciel installé sur ordinateur 
+
+=> ES6 de javascript est publié en 2015 
+=> délai de publication dans les navigateurs web (quelques mois)
+=> il faut attendre que les visiteurs mettent à jour leur navigateurs 
+
+02-hello.html
+
+
+

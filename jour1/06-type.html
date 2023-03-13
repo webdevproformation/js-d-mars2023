@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 06-type.html
+        // en javascript il est possible de stocker dans variables 5 types de valeurs 
+        // 5 types de valeurs que l'on peut stocker dans des variables 
+
+        // type primitif / de base 
+
+        // texte / chaine de caractère / string 
+        // 3 manières 
+        const premier = "hello" ; // guillemet
+        const deuxieme = 'bonjour' ; // apostrophe
+
+        const troisieme = `ola` ; // ES6 de créer des strings => backtick 
+        // https://webdevpro.net/raccourcis-clavier-pour-coder-sur-macos/
+        // windows AltGr + 7 deux fois ``
+        // ctrl + alt + 7 en haut deux fois 
+
+        // --------------------
+
+        // chiffres => number 
+        const total = 200 ; // chiffre entier 
+        const reduction = -20 ; 
+        // chiffre entier négatif espace entre - et chiffre facultatif
+        const prix = 12.3 ; // chiffre à virgule => utilise le . 
+
+        const grandChiffre = 20000000000 ;
+        const grandChiffre2 = 20_000_000_000 ; // utiliser le symbole _ underscore 
+        // comme séparateur des miliers dans les grands chiffres 
+        // le _undescore rend le chiffre lisible aucun impact sur la valeur du chiffre 
+
+        const tresTresGrandChiffre = 1e30 ; // 10 puissance 30 ;
+
+        // --------------------
+
+        // valeur logique / boolean 
+
+        const toto = true ; // true est un mot clé comme var, let const = ; 
+                            // true n'est pas un string => mot clé 
+        const titi = "true" ; // ce n'est pas la même valeur 
+
+        const tutu = false ; // false est un mot clé du langage 
+
+        // 3 types simples => string / number / boolean 
+        // 1 variable qui contient 1 valeur 
+
+        // type complexe 
+        // 1 variable qui contient PLUSIEURS valeurs 
+
+        // tableau => array 
+        // créer un tableau etudiants qui contient 3 valeurs de type string 
+        const etudiants = [ "Alain" , "Benois" , "Céline"  ] ;
+
+        // créer un tableau age qui contient 4 valeurs de type number 
+        const ages = [ 20, 25 , 30 , 40 ] ;
+
+        // créer un tableau verifications qui contient 5 boolean
+        const verifications = [ true , false , true , true , false ] ;
+
+        // créer un tableau formation qui contient 4 valeurs de type différents 
+        const formation = [ "Doranco" , 5 , "semaine" , false  ]; 
+
+        const formation2=["Doranco",5,"semaine",false]; 
+        // les espaces avant et après les , sont facultatifs et permettent d'aérer le code
+        // array => [ ] crochet => angle bracket
+
+        // objet => object 
+        // accolades => curly bracket
+        const arbre = { } ; // objet vide 
+        // clé : valeur ,
+        
+        const voiture = { // variable voiture type objet qui contient 4 valeurs 
+            marque : "Peugeot" ,
+            model : 206 ,
+            propretaire : "Alain" ,
+            controleTechnique : true 
+        };
+        // marque clé ou une propriété de l'objet voiture 
+        // "Peugeot" c'est la valeur associée à la clé / propriété voiture 
+
+
+    </script>
+</body>
+</html>

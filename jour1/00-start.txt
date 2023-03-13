@@ -1,0 +1,31 @@
+Lancement de la semaine de Javascript :
+
+1 sur le bureau de votre ordinateur => créer un dossier "js"
+
+2 lancer Visual Studio Code 
+
+3 Fichier > Ouvrir le dossier > sélectionner le dossier "js"
+
+4 créer un sous dossier "jour1"
+
+5 dans le sous dossier "jour1" créer un fichier 00-start.txt 
+
+-----------------------
+
+Malik HARRIZ
+malik.h@webdevpro.net 
+
+support de cours (polycopié) via un site internet 
+
+https://formation.webdevpro.net/js-initiation/ (dans la barre d'adresse pas sur google)
+login : js
+mot de passe : initiation 
+
+=> présenté en cours et déjà écrit sur le site 
+
++ toutes les notes de cours je vais les partagé sur un dépôt github.com 
+
+(je vous donne le lien dans très peu de temps)
+
+
+
