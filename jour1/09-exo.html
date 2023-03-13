@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const titre = "M";
+        const prenom = "John";
+        const nom = "Doe" ;
+
+        // Je m'appelle Monsieur John Doe
+
+        // solution 1 " " + plus 
+        const phrase1 = "Je m'appelle " + titre + "onsieur " + prenom + " " + nom ;
+        console.log(phrase1);
+
+        // solution 2 => template string avec `` ${variable}
+        const phrase2 = `Je m'appelle ${titre}onsieur ${prenom} ${nom}`;
+        console.log(phrase2);
+
+        // solution 3 directement mettre la concaténation comme paramètre de console.log()
+        console.log(`Je m'appelle ${titre}onsieur ${prenom} ${nom}`); 
+        console.log( "Je m'appelle " + titre + "onsieur " + prenom + " " + nom ) ;
+
+        // deuxieme phrase => John vient de découvrir l'informatique 
+        const phrase3 = prenom + " vient de découvrir l'informatique \n";
+        // \n antislash new line => permet de faire des sauts de ligne dans la console
+        const phrase4 = `${prenom} vient de découvrir l'informatique`;
+        console.log(phrase3 , phrase4); 
+        console.log(phrase3); 
+        console.log(phrase4); 
+    </script>
+</body>
+</html>
