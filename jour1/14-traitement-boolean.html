@@ -9,6 +9,109 @@
 <body>
     <script>
         // 14-traitement-boolean.html
+        const a = true ;
+        const b = false ;
+
+        // en général vous allez obtenir les valeurs true et false 
+        // suite à une comparaison entre deux valeurs 
+
+        const c = 20 > 10 ; // comparaison entre 20 et 10 
+        //         true 
+        console.log(c);
+
+        const d = 20 < 10 ; 
+        //        false 
+        console.log(d) ;
+
+        // opérateur de comparaison 
+        // > strictement supérieur
+        // < strictement inférieur
+        // >= supérieur ou égal  Attention le symbole =>  ne fonctionne pas 
+        // <= inférieur ou égal  Attention =< n'existe pas 
+        // != différent 
+        // == égal simple (en valeur)
+        // === égalité stricte
+        // !== différence stricte 
+
+        const e = 2 == "2" ; // chiffre 2 == chiffre 2 mis entre "" => string 
+        //   javascript comparer chiffre et lettre 
+        // je vais essayer de transformer le string en number => transtyper 
+        //        2 == 2
+        //     true 
+
+        console.log(e);
+
+        const f = 2 === "2" ; 
+        //        il faut comparer non seulement la valeur ET le type 
+        //        comparaison stricte 
+        //       false 
+        console.log(f);
+
+        const g = 20 === "20px" ;
+        const h = 20 == "20px" ;
+        console.log(g, h) // false et false
+
+        const i = "2cm" == "2m" ;
+        console.log(i); // false
+        const j = "2cm" === "2m" ;
+        console.log(j); // false
+
+        // dans ce cas bien précis on obtient un résultat différent en fonction de == ou ===
+        const k = 5000 == "5000" // true
+        const l = 5000 === "5000" // false 
+
+        // --------------------------
+
+        // 3 opérateurs booleans 
+        // &&  ET
+        // ||  OU
+        // !   NOT 
+
+        // permettent de pouvoir effectuer des opérations sur plusieurs comparaisons 
+
+        const m = 20 > 30 && 10 < 5 ; 
+        //         false  &&  false
+        //            false 
+        console.log( m );
+
+        const n = 20 < 30 && 10 < 5 ;
+        //          true  &&  false 
+        //                 false 
+        console.log( n ) ;
+
+        const o = 20 < 30 && 10 > 5 ;
+        //          true  && true // les deux conditions sont true des deux côtés du && 
+        //              true 
+        console.log( o );
+
+        // false && false => false
+        // true  && false => false
+        // false && true  => false
+        // true  && true  => true
+        // exemple les formulaires de connexion avec login et password 
+
+        // false || false => false 
+        // true  || false => true
+        // false || true  => true 
+        // true  || true  => true
+        // exemple éligible pour l'achat d'une carte => "mineur" ou "habitez dans le 92"
+
+        const p = 30 > 10 || 5 >= 20 ;
+        //         true   || false 
+        //             true 
+        console.log( p ); 
+
+        // ! NOT opérateur unaire 
+        // !false => true 
+        // !true  => false  
+
+        const q = !(20 > 30)  ;
+        //         !(false)
+        //         !false
+        //          true 
+        console.log(q);
+
+        // opérateur de comparaison et opérateur boolean
     </script>
 </body>
 </html>
