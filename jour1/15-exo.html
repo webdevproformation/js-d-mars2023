@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = 20 ;
+        var  b = 10 ;
+        let v = 1 ;
+        j = 10 ; // Python
+                 // vraiment déconseillé de créer des variables 
+
+        const verif = 10 != 5 ; // 10 est différent de 5 
+        console.log(verif); 
+
+        const verif2 = !( 10 != 5 ) ; // l'inverse (NOT) de la comparaison  10 est différent de 5 
+        //             !(   true  )
+        //             !true
+        //              false
+        
+        // !=        inverse de == 
+        // différent             égal 
+        console.log(verif2); 
+        /*
+        2 >= 2  true 
+
+        "a" == "ab"  false 
+        2 != 3 && 10 < 33 
+        true  && true 
+        true 
+
+        "hello" > "bonjour" 
+        javascript va transformer les lettres en valeurs binaires 
+        68      >  62
+        true 
+
+
+        2 ==  "2"
+        2 == 2 transtypage 
+        true
+
+        2 === "2"
+        false 
+
+        (2 != 5 && 3 > 4 ) || 2 <= 14 
+        ( true  && false ) || true 
+            false          || true 
+            true 
+ 
+        2 != 5 && ( 3 > 4  || 2 <= 14 ) 
+        true  &&   ( false || true  )
+        true  &&   true
+        true 
+
+        2 != 5 && 3 > 4  || 2 <= 14 
+        true   &&  false ||  true // si pas de () && est prioritaire sur ||
+        false            || true 
+        true 
+
+        
+        */
+       console.log(2 != 5 && 3 > 4  || 2 <= 14)
+
+       const calcul = 10 * 5 + 3 ; 
+       //               50 + 3
+       //               53
+    </script>
+</body>
+</html>
