@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 12-operateur-unaire.html
+        
+        // opérateur binaire 
+        const b = 10 ;
+        const a = 15 + b ; //  opérateur + entouré de 2 valeurs 10 et 15 
+        //       valeur opérateur variable
+
+        // opérateur unaire => opérateur et une variable / valeur
+        // ++
+        // -- 
+        // +=
+        // -= 
+
+        let x = 1 ; // 1
+        // modifier la valeur stockée dans la variable x et l'augmenter de + 1 (modifier)
+        // je ne peux pas utiliser const MAIS dans ce cas je dois utiliser let 
+            x = x + 1 ; // 2
+
+        console.log(x);
+        // si je remplace let => const 
+        // Uncaught TypeError: invalid assignment to const 'x'
+        let y = 10 ;
+            y = y + 1 ; // manière classique 
+            y += 1    ;  // utiliser l'opérateur unaire +=
+            y++       ;  // variable++ // prendre la valeur de la variable y 
+                        // augmente de + 1 
+                        // je stocke le résultat du calcul dans y 
+        console.log(y) // 13 
+        let z = 20 ;
+            z++ ; 
+        //    z+++ ; augmenter de + 2 => +++
+            z += 2 ;
+        let w = 30 ;
+            w = w - 1 ;
+            w -= 1 ;
+            w-- ; 
+        // les 3 notations pour réduire la valeur de w sont identiques 
+        let p = 4 ;
+            p-- ;
+            /* p---;
+            p---- ; c'est notation avec un nombre de - supérieur à 2 n'existent pas */
+
+        // opérateur uniaire += il est aussi utilisable sur les strings
+
+        const prenom = "Victor";
+        const nom = "Hugo" ;
+        const auteurFr = prenom + " " + nom ; 
+        // 3 variables prenom / nom / auteurFr
+
+        // vous pouvez faire le même traitement avec 1 seule variable via l'opérateur uniaire +=
+        // 1 seule variable 
+        let auteurFr2 = "Victor" ;
+            auteurFr2 = auteurFr2 + " " ;
+            auteurFr2 = auteurFr2 + "Hugo" ; 
+        
+        console.log(auteurFr2) ; 
+
+        let auteurFr3 = "Victor" ;
+            auteurFr3 += " " ; 
+            auteurFr3 += "Hugo" ; 
+        
+        console.log(auteurFr3) ; 
+
+    </script>
+</body>
+</html>
