@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 08-traitement-string.html
+        // avec les chaines de caractères => le traitement de base 
+        // concaténation 
+        // le fait d'addition un texte avec un autre 
+
+        const prenom = "Victor" ;
+        const nom = "Hugo" ;
+
+        // créer une variable qui contient "Victor Hugo" => concaténation 
+
+        // manière classique de faire de la concaténation
+        const auteurFrancais = prenom + " " + nom ; 
+        // comment l'ordinateur va exécuter l'instruction 
+        //                     "Victor" + " " + "Hugo"
+        //                     "Victor"+" "+"Hugo"
+        //                     "Victor Hugo"
+        //                    stocker "Victor Hugo" dans la variable auteurFrancais
+
+        // ES6 => nouvelle manière de faire de la concaténation
+
+        const auteurFrancais2 = `${prenom} ${nom}` ; // template string
+        // const auteurFrancais2 = "${prenom} ${nom}" ; // template string
+
+
+        //je veux créer une variable citation 
+        // stocker le texte suivant "Victor Hugo a dit "Vive Notre Dame""
+        // si vous avez des guillemets à l'intérieur d'une chaine de caractère 
+        // vous allez devoir échapper les "" dans la chaine de caractère 
+
+        const citation = "Victor Hugo a dit \"Vive Notre Dame\"";
+        // vous devez ajouter un \ devant chaque guillemet dans la string 
+        // pour lui dire que le " est un guillemet et non le caractère qui début et finit la valeur string 
+
+        const citation2 = `Victor Hugo a dit "Vive Notre Dame"` ;
+        // avec les ` back tick pas besoin d'échappement
+
+        const citation3 = 'Victor Hugo a dit "Vive Notre Dame"' ;
+
+
+
+    </script>
+</body>
+</html>
