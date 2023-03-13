@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = "bonjour les amis" ;
+        /* 
+        autre solution possible
+        const a = 'bonjour les amis' ;
+        const a = `bonjour les amis` ; */
+
+        const b = 70000000000;
+        /* const b = 70_000_000_000; 
+        const b = 7e10 */
+
+        const c = false  ; 
+
+        // const etudiants = [ "Alain" , "zorro" , "Charles" , 30 , "comment allez vous"  ];
+        // const etudiants=["Alain","zorro","Charles",30,"comment allez vous"];
+        // quand vous avez un tableau avec beaucoup de valeurs 
+        const etudiants = [ 
+                "Alain" , 
+                "zorro" , 
+                "Charles" , 
+                30 , 
+                "comment allez vous" // , virgule facultative 
+        ];
+        // il est possible et même conseillé pour des tableaux qui contiennent beaucoup de valeurs de sauter des lignes juste après la virgule
+        // il est possible de mettre une virgule après la dernière valeur
+        // facultative et n'entraine pas de bug 
+
+        const formation = {
+            nom : "formation CDA" ,
+            duree : 4 , // nom variable et propriétés il est déconseillé d'utiliser 
+                        // des accents dans les noms 
+            unite : "mois" ,
+            organisme : "Doranco"
+        };
+        // attention : entre clé et la valeur pas de = 
+
+        // la plus courte sans saut de ligne et sans espace 
+        const formation2={nom:"formation CDA",duree:4,unite:"mois",organisme:"Doranco"};
+
+        const formation3 = { // JSON => JavaScript Objet Notation
+            "nom" : "formation CDA" ,
+            "duree" : 4 ,
+            "unite" : "mois" ,
+            "organisme" : "Doranco"
+        }
+        // par javascript comme un objet 
+        // il est possible d'entourer les clés de l'objet avec des ""
+        // JSON => JavaScript Objet Notation
+    </script>
+</body>
+</html>
