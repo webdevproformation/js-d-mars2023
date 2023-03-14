@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // quelquesoit le langage informatique 
+        // stocker des instructions dans une variable => fonction 
+
+        // 2 étapes 
+        // 1 créer la fonction (stockage) 
+        function a(){
+            const etudiant = "Alain";
+            const salution = `${etudiant} dit bonjour`;
+            console.log(salution);
+        }
+        
+        // 2 exécuter la fonction
+        a(); 
+
+
+        // attention si vous créez des variables dans la fonction => scope local
+        // existe que dans la fonction 
+        // on ne peut pas utiliser une variable créée dans une hors de ses accolades
+
+        function b(){
+            const verif = true ;
+            if(verif){
+                console.log("ça marche")
+            }
+        }
+
+        // si j'ai besoin de récupérer une variable qui a été créée dans une fonction
+        // il faut utiliser dans la fonction le mot clé return variable
+        function c(){
+            const sommaire = "je suis le sommaire d'un livre";
+            const titre = "20 000 lieux sous les mers";
+            const livre = `${titre} ${sommaire}` ;
+            return livre ; 
+        }
+        // attention return !== console.log()
+        // return => accéder à la valeur d'une variable DANS fonction à l'extérieur
+        // console.log() => afficher le contenu d'une variable dans la console 
+        // utiliser livre hors de la fonction
+        const resultat = c(); // dans la variable resultat j'ai le contenu de la variable livre 
+        // la ligne précédente n'affiche rien / récupération
+        console.log(resultat); 
+
+        // reprise exemple fonction a 
+        function a(){
+            const etudiant = "Alain";
+            const salution = `${etudiant} dit bonjour`;
+            console.log(salution);
+        }
+        
+        a(); 
+
+        function a2(){
+            const etudiant = "Alain";
+            const salution = `${etudiant} dit bonjour`;
+            return salution;
+        }
+        
+        const etudiantDitBonjour = a2(); 
+        console.log(etudiantDitBonjour);
+
+        // ----------------------------
+        // autre concept  => arguments / paramètres de la fonction
+
+        function addition(){
+            let a = 20 ;
+            const b = 30 ;
+            console.log(a + b);
+        }
+        /* let a = 12;
+        let a = 30 ; */ // erreur
+
+        addition(); 
+        // si je veux faire une autre addition 15 + 12 
+        // la fonction que j'ai créée 20 + 30 
+
+        function addition2(){
+            let a = 12 ;
+            const b = 15 ;
+            console.log(a + b);
+        }
+        addition2()
+
+        // au lieu de créer les variable DANS la fonction
+
+        function addition3( a , b ){ // variable comme paramètre de la fonction
+            /* const a = ...
+            const b = ... */
+            console.log(a + b);
+        }
+
+        // au moment de l'appel de la fonction que l'on va donner une valeur
+        // aux paramètres 
+
+        addition3( 20 , 30 ) ; 
+        addition3( 12 , 15 ) ; 
+        console.log(addition3( 53 , 80 )) ; 
+        // attention il est possible de créer une fonction avec paramètre et return
+        function multiplication( a, b ){
+            return a * b ;
+        }
+
+        const r =  multiplication( 10, 5 )
+        console.log(r);
+
+        console.log(console.log(10)) // 10 
+                                     // undefined
+
+        function addition4( a , b ){ // variable comme paramètre de la fonction
+            /* const a = ...
+            const b = ... */
+            return a + b;
+        }
+
+        const toto = addition4(20,45)
+        console.log(toto); 
+
+        console.log(addition4(20,45))
+    </script>
+</body>
+</html>
