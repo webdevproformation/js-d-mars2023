@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addition(){
+            const a = 200 ;
+            const b = 24.5 ;
+            const c = a + b ;
+            console.log(c);
+        }
+        // attention ne pas mettre console.log(c); hors des accolades 
+        // erreur => ReferenceError: c is not defined
+        // scope / portée des variables 
+        console.log(addition) // => afficher la définition de la fonction 
+
+        addition();
+        addition();
+        addition();
+    </script>
+</body>
+</html>
+<!-- 07-structure-fonction-suite.html -->
