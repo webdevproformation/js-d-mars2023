@@ -44,6 +44,36 @@
             console.log(i)
         }
 
+        for (let i = 2; i <= 6; i++) {
+            i = i * 4;
+            console.log(i);
+        }
+
+        /*  for ( let i=2; i<7; i++){ 
+            4(i+1.  console.log(i)
+        } */
+
+        // console.log() => en minuscule à 100%
+        // console.Log() => il faut respecter la casse !!!
+
+
+      //exercice sur les boucles
+      //tables de multiplications
+      function tableMultiplication(nombre , max) {
+        // vérification du paramètre d'appel de la fonction
+        if ("number" != typeof nombre || nombre < 0) {
+          return ``;
+        }
+        // initialisation du template
+        let template = ``;
+        for (let i = 1; i <= max ; i++) {
+          template += `${nombre} x ${i} = ${i * nombre} \n`;
+        }
+        // console.log(template);
+        return (template)
+      }
+      console.log(tableMultiplication("a"));
+      console.log(tableMultiplication(7 , 9));
 
     </script>
 </body>
