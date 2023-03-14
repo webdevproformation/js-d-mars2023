@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // méthode 1
+        function celsusToFarenheit2 (celsus) {
+            return ` ${celsus}°Celsus vaut ${9 * celsus / 5 + 32}°Farenheit ` ;
+        }
+
+        // méthode 2
+        const celsusToFarenheit2 = function (celsus) {
+            return ` ${celsus}°Celsus vaut ${9 * celsus / 5 + 32}°Farenheit ` ;
+        }
+
+        // méthode 3
+        const celsusToFarenheit = (celsus) => {
+            return ` ${celsus}°Celsus vaut ${9 * celsus / 5 + 32}°Farenheit ` ;
+        }
+
+        console.log(celsusToFarenheit(40)); 
+
+        // si j'écris une fonction fléchée ET que cette fonction fléchée contient 1 paramètre je peux enlever les ()
+
+        // méthode 3 bis
+        const celsusToFarenheit4 = celsus => {
+            return ` ${celsus}°Celsus vaut ${9 * celsus / 5 + 32}°Farenheit ` ;
+        }
+
+        // méthode 3 ter 
+        // je crée une fonction fléchée et qu'elle contient 1 seule instruction qui return { et return}
+
+        const celsusToFarenheit5 = celsus => ` ${celsus}°Celsus vaut ${9 * celsus / 5 + 32}°Farenheit ` ;
+        
+    </script>
+</body>
+</html>
