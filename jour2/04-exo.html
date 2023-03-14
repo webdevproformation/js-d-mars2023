@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 3 % 3 => 0
+        for(let i = 1 ; i <= 100 ; i++){
+            if( i % 5 === 0 && i % 3 === 0 ){ // d'abord !!
+                console.log("fizzbuzz")
+            }else if(i % 5 === 0){
+                console.log("buzz")
+            } else if(i % 3 === 0){
+                console.log("fizz")
+            }else {
+                console.log(i)
+            }
+        }
+
+        console.log("solution 2"); // from Cédric
+        
+        for(let i=1;i<101;i++) {
+            let resDisplay;
+            if(Number.isInteger(i/15)) {
+                resDisplay = 'fizzbuzz';
+            } else if (Number.isInteger(i/3)) {
+                resDisplay = 'fizz';
+            } else if(Number.isInteger(i/5)) {
+                resDisplay = 'buzz';
+            } else {
+                resDisplay = i;
+            }
+            console.log(resDisplay);
+        }
+    </script>
+</body>
+</html>
