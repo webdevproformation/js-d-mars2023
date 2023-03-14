@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function aireCercle(rayon){
+            const pi = 3.14 ;
+            const resultat = pi * rayon ** 2 ;
+            console.log(`un cercle de rayon ${rayon} a une aire de ${resultat}`) ;
+        }
+
+        aireCercle(44.5);
+        aireCercle(70.43);
+
+        // dans javascript => il ya des objets dans le langage 
+        // const let var + = ++ mot clé du langage javascript 
+        // objet clé => Math => class clé 
+        
+        console.log(Math.PI);
+        const pi = 3.141592653589793 
+
+        function aireCercle2(rayon){
+            const resultat = Math.PI * rayon ** 2 ;
+            console.log(`un cercle de rayon ${rayon} a une aire de ${resultat.toFixed(2)}`) ;
+        }
+        aireCercle2(44.5);
+        aireCercle2(70.43);
+
+    </script>
+</body>
+</html>
+<!-- 
+    10-fonction-flechee.html
+-->
