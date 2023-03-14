@@ -9,6 +9,39 @@
 <body>
     <script>
         // 07-structure-fonction-suite.html
+
+        function calcul(){
+            const total = 2000 ; // la variable total est créée dans la fonction calcul()
+                                 // cette variable n'existe QUE dans la fonction
+                                 // la variable total ne PEUT être utilisée QUE dans la fonction calcul
+                                 // si tu utilises la variable total hors de accolades => erreur 
+                                 // la variable total portée (existante) locale à la fonction
+                                 //            local  scope 
+            console.log(total) ; 
+        }
+
+        /* const depense = total + 30 ; // ??? ReferenceError: total is not defined
+        console.log(depense);  */
+
+        // je crée une autre fonction multiplication
+        // contient 3 instructions 
+        // les variables a , b et c sont en local scope
+        // MAIS et j'ai besoin de récupérer la valeur de c hors de la fonction 
+        // comment faire ?? 
+        // via nouveau mot clé return 
+        function multiplication(){
+            const a = 2 ;
+            const b = 30 ;
+            const c = a * b ;
+            return c ; // 1 grâce à cette nouvelle instruction que je vais pouvoir récupérer c 
+                       // HORS de multiplication
+        }
+
+        // console.log(c);  // erreur
+        const resultat = multiplication() ; 
+        // 2 exécuter et stocker le return dans la variable resultat
+        console.log(resultat);
+
     </script>
 </body>
 </html>
