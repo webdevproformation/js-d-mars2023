@@ -10,7 +10,79 @@
     <script>
         // 10-fonction-flechee.html
 
+        // à partir de 2015 => nouvelle version de javascript ES6 
+        // `${}`
+        // let const
+        // fonction fléchée => arrow function => nouvelle manière de créer des fonctions 
+
+        function a (largeur, hauteur){ // manière classique de créer une fonction 
+            return largeur * hauteur ; 
+        }
+
+        a( 10 , 20 ); 
+
+        // function b(){}
+        const b = function (){ } // stocke dans la variable b une fonction anonyme
+
+        // arrow function 
+        const c = () => { } // fonction fléchée 
+
+        // 3 manières de créer des fonctions
+        // les 3 collaborent 
+        // dans la mesure du possible // arrow function 
+        // mais arrow function ne remplacent intégralement les fonctions classiques 
+
+
+        // reste encore des concepts sur les fonctions 
+        // closure
+        // callback 
+
+        // créer des fonctions et de les écrire de 3 manières différentes 
+
+
+        // manière 1 classique 
+        function aireCercle(rayon){
+            return rayon ** 2 * 3.14 ;
+        }
+        // exécution 
+        const r1 = aireCercle(20) ;
+        console.log(r1) ;
+
+        // manière 2 stocker fonction anonyme dans une variable aireCercle2
+        const aireCercle2 = function(rayon){
+            return rayon ** 2 * 3.14 ;
+        }
+        const r2 = aireCercle2(30) ;
+        console.log(r2) ;
+
+        // manière 3 stocker une fonction fléchée dans une variable aireCercle3
+        const aireCercle3 = (rayon) => {
+            return rayon ** 2 * 3.14 ; // rayon * rayon * 3.14
+        }
+        // aireCercle3 = 12 ;
+        const r3 = aireCercle3(40);
+        console.log(r3);
 
     </script>
 </body>
 </html>
+<!-- 
+    créer le fichier 11-exo.html 
+    
+    contient une fonction qui permet de transformer une température en Celsus (Europe) => température en Farenheit (Américaine)
+
+    function (40°C){
+        .... 
+        => 
+    } 104°F
+    utiliser la fonction flechée pour créer cette fonction 
+
+
+
+
+
+    // closure
+    // callback => ajax
+    // this => objet  => objet
+    // binding ...  => objet / class
+-->
