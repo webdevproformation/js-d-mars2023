@@ -11,13 +11,15 @@
         // 3 % 3 => 0
         for(let i = 1 ; i <= 100 ; i++){
             if( i % 5 === 0 && i % 3 === 0 ){ // d'abord !!
-                console.log("fizzbuzz")
+                console.log("fizzbuzz") ;
             }else if(i % 5 === 0){
-                console.log("buzz")
+                console.log("buzz") ;
             } else if(i % 3 === 0){
-                console.log("fizz")
-            }else {
-                console.log(i)
+                console.log("fizz") ;
+            } else { // si toutes les conditions précédentes sont false
+                     // else n'a pas de condition => la situation par défaut 
+                     // else est TOUJOURS la dernière instruction dans une structure conditionnelle
+                console.log(i) ;
             }
         }
 
@@ -39,3 +41,10 @@
     </script>
 </body>
 </html>
+<!-- 
+    structure condition if 
+    boucle for 
+    la dernière structure fonction => gros sujet 
+    très très riche en javascript (plus riche que dans d'autres langage par exemple PHP)
+    05-structure-fonction.html
+-->
