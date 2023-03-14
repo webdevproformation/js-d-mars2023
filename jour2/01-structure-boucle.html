@@ -9,6 +9,42 @@
 <body>
     <script>
         // 01-structure-boucle.html
+        // 2ème structure => boucle (loop)
+
+        // répéter une code de nombreuses fois en l'écrivant 1 fois 
+        // refaire le / les mêmes traitements plusieurs MAIS en l'écrivant 1 fois
+
+        // mot clé for(){}
+        // dans les parenthèses du mot clé for 3 instructions
+        // let i = 0 => crée une variable i initialise à la valeur 0 et let i va être modifié
+        //              i incrément => augmenter
+        // i < 3 => comparaison => condition de sortie de la boucle 
+        //               tant que cette condition est true, javascript va répéter les instructions 
+        //               dans les accolades du for
+        //               dès que la condition est false => sortie des accolades
+        // i++  => opérateur unaire i = i + 1 
+        //                j'augmente de + 1 la valeur de i 
+        for(let i = 0 ; i < 3 ; i++ ){
+        //              0 < 3
+        //               true => exécution accolade 0 dans la console
+        //                     i = i + 1
+        //                     i = 0 + 1
+        //                     1
+        //              1 < 3
+        //               true => exécution accolade 1 dans la console
+        //                     i = i + 1
+        //                     i = 1 + 1
+        //                     2
+        //              2 < 3
+        //               true => exécution accolade 2 dans la console
+        //                     i = 2 + 1
+        //                     3
+        //              3 < 3
+        //              false => sortie de la boucle 
+            console.log(i)
+        }
+
+
     </script>
 </body>
 </html>
