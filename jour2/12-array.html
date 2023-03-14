@@ -9,6 +9,68 @@
 <body>
     <script>
         // 12-array.html
+        // type complexe => stocker plusieurs valeurs dans une variable 
+
+        // manière actuelle
+        const a = [1,2,3] ; // *** 
+        // chaque valeur 1, 2 et 3 a une position dans le tableau a 
+        // position => index 
+        // la valeur a pour position / index la valeur 0 
+
+        // si j'ai besoin de récupérer la valeur 1 qui est stockée en 1ère position dans le tableau a 
+        // a[0]
+        console.log(a[0]) ; // a est tableau 
+        // a(0) ; a est une fonction
+
+        // manière plus ancienne 
+        const b = new Array(1,2,3) ; // culture générale
+
+        // dans un tableau vous pouvez stocker autant de valeur que vous voulez 
+        // et de n'importe quelle type string / number / boolean / array / objet 
+
+        const vehicules = [ "peugeot", "renault" , "vw" , "audi" ];
+        //                      0          1        2        3
+        const proprietaires = ["Alain" , "Céline" , "Zorro" , "Charlotte"];
+        //                       0          1
+        // concaténation en utilisant les tableaux 
+
+        // Céline possède une renault 
+        const phrase = `${proprietaires[1]} possède une ${vehicules[1]}`;
+        console.log(phrase); 
+
+        // Céline et Charlotte possèdent une renault 
+        const phrase2 = `${proprietaires[1]} et ${proprietaires[3]} possèdent une ${vehicules[1]}`;
+        console.log(phrase2);
+
+        // écrire dans la console 
+        // Zorro vient d'acheter une audi qui remplace sa vw 
+
+       const phrase3 = `${proprietaires[2]} vient d'acheter une ${vehicules[3]} \n qui remplace sa ${vehicules[2]} ` ;
+       console.log(phrase3);
+
+       // j'ai deux tableaux 
+       const produits = ["PS4" , "nintendo" , "gameboy"];
+       const prix     = [200  ,    400       ,  80     ] ;
+
+       // fusionner les deux tableaux en 1 seule multi dimensionnel
+       const panier = [  
+            [ "PS4" , 200 ] ,  // 0
+            //  0      1
+            [ "nintendo" , 400 ],  // 1
+            //  0      1
+            ["gameboy"   , 80]   // 2
+            //  0      1
+        ] ; 
+
+        // j'ai acheté une gameboy et une nintendo pour le prix de 480 euros
+
+        const phrase4 = `j'ai acheté une ${panier[2][0]} et une ${panier[1][0]} pour le prix de ${panier[1][1] + panier[2][1] } euros`
+        console.log(phrase4);
+
+        // avancé => on le verra React Native / redux / useReducer()
+        const total = panier.reduce((total, item) => item[1] + total , 0)
+        console.log(total); 
+
     </script>
 </body>
 </html>
