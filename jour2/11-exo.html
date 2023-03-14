@@ -10,7 +10,7 @@
     <script>
 
         // méthode 1
-        function celsusToFarenheit2 (celsus) {
+        function celsusToFarenheit1 (celsus) {
             return ` ${celsus}°Celsus vaut ${9 * celsus / 5 + 32}°Farenheit ` ;
         }
 
@@ -37,7 +37,7 @@
         // je crée une fonction fléchée et qu'elle contient 1 seule instruction qui return { et return}
 
         const celsusToFarenheit5 = celsus => ` ${celsus}°Celsus vaut ${9 * celsus / 5 + 32}°Farenheit ` ;
-        
+        console.log(celsusToFarenheit5(41));
     </script>
 </body>
 </html>
