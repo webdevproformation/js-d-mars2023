@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const listeMarque = ["Toyota","BMW", "Skoda", "Nissan"];
+
+    let template=`Affichage avec boucle for (simple) \n`;
+    for (let i=0; i<listeMarque.length;i++){
+        template+=`Voiture n°${i+1} a la marque ${listeMarque[i]} \n`;
+    } 
+        template +=`autre solution \n`;
+    for(let i in listeMarque){ // objet 
+        // console.log(i); "0" 
+        template+=`Voiture n°${parseInt(i)+1} a la marque ${listeMarque[i]} \n`;
+    }
+
+    console.log(template);
+
+
+    // ------------------
+
+    const listeMraque = ["toyota","BMW","SKODA","Nissan"];
+    /* const mycar =" voiture n1 "
+    for (let i=mycar, 1<i<4, i++) */
+    let i = 1 ;
+    for(let car of listeMraque){ 
+        console.log (car + " " +listeMraque ); 
+        console.log(`Voiture n°${i} a la marque ${car} \n`) 
+        i++ ; 
+    }
+
+  // -----------------
+
+  const listeMarque2 = ["Toyota", "BMW", "Skoda", "Nissan"] ;
+        let j = 1 ;
+        for (let b of listeMarque2){
+            console.log(b) ;
+            console.log(`voiture n° ${j} a la marque ${b}`)
+            j++ ;
+        } ;
+        console.log(`voiture n° 2 a la marque ${listeMarque2[1]}`)
+        console.log(`voiture n° 2 a la marque ${listeMarque2[2]}`)
+        console.log(`voiture n° 2 a la marque ${listeMarque2[3]}`)
+
+
+    </script>
+</body>
+</html>

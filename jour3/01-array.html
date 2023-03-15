@@ -85,7 +85,7 @@
 </html>
 <!--
     créer le fichier 02-exo.html ayant une balise <script>
-        
+
     2 ce fichier contient un tableau ayant les valeurs suivantes :
     const listeMarque = ["Toyota", "BMW", "Skoda", "Nissan"] ;
 
@@ -96,3 +96,10 @@
     voiture n° 3 a la marque Skoda
     voiture n° 4 a la marque Nissan
 -->
+
+const listMarque = [ "Toyota" , "BMW" , "Skoda" , "Nissan"] ;
+let i = 1;
+for(let f of listMarque){ 
+    console.log(`voiture n° ${i} a la marque ${f}`);
+    i++ ;
+}
