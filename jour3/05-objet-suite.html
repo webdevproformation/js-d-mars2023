@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 05-objet-suite.html
+
+        // dans un objet on peut stocker des valeurs number / string / boolean / tableau / objet
+
+        const voiture = {
+            marque : "Peugeot" ,
+            modele : 206 ,
+            controleTechnique : false ,
+            options : ["abs" , "autre option"],
+            proprietaire : {
+                nom : "Alain" ,
+                adresse : {
+                    rue : "75 rue de Paris",
+                    cp : 75000 ,
+                    ville : "Paris"
+                }
+            }
+        } ;
+        // imbriquer un objet dans un objet dans un objet 
+        // NodeJS 
+
+        // chainage 
+        console.log( voiture.proprietaire.adresse.cp ) // 75000
+        // écrire dans laconsole la phrase suivante 
+        // Alain a acheté une 206 et il va la garer à Paris
+
+        console.log(`${voiture.proprietaire.nom} a acheté une ${voiture.modele} et il va la garer à ${voiture.proprietaire.adresse.ville}`)  ;      
+
+        // -- dans un obet vous pouvez stocker des valeurs MAIS aussi des fonctions 
+
+        const carre = { // contient 1 propriété et 2 méthodes 
+            nom : "un carré" , // propriété de l'objet carre
+        //  clé : valeur
+            surface : function(){ // propriété surface stocke une fonction anonyme 
+                                  // méthode => fonction stockée dans une objet 
+            },
+            perimetre(){ // ES6 nouvelle syntaxe de créer des méthodes 
+
+            }
+        }
+        // carre => objet
+        // "un carré" valeur de la propriété nom de l'objet carre 
+
+        const rayon = 40 ;
+
+        const cercle = {
+            rayon : 20 ,
+            surface(){
+                // stocker des instructions 
+                // si j'ai besoin d'utiliser une propriété de l'objet dans la méthode
+                // this pseudo variable 
+                return 3.14 * this.rayon ** 2 ;
+                // return 3.14 * cercle.rayon ** 2 ;
+            },
+            perimetre(){
+                return 2 * 3.14 * this.rayon // 2 * PI * rayon 
+            }
+        }
+
+        // objet permet d'ORGANISER son code => regrouper dans des objets
+        const article = {
+            titre : "Premier article" ,
+            contenu : "lorem ipsum" ,
+            dtPublication : "15 Mars 2023",
+           // rediger : function(){} 
+            rediger(){ // existe QUE pour l'objet article 
+            // traitement / la méthode n'existe que dans le cadre de l'objet article 
+                return `${this.titre} \n ${this.contenu} \n publié le : ${this.dtPublication} `;
+                //return `${article.titre} \n ${article.contenu} \n publié le : ${article.dtPublication} `;
+            } 
+        };
+
+        console.log(article.dtPublication) ; 
+
+        // exécuter la méthode stockée dans l'objet article 
+        const nouvelArticle = article.rediger();
+        console.log(nouvelArticle); 
+        // 
+        const titre = "Premier article" ;
+        const contenu = "lorem ipsum"
+        const dtPublication =  "15 Mars 2023";
+        function rediger(){
+            return `${titre} \n ${contenu} \n publié le : ${dtPublication} `;
+        }
+
+
+
+    </script>
+</body>
+</html>
+<!-- 
+    créer le fichier 06-exo.html 
+
+    créer objet qui s'appelle rectangle 
+    cet objet contient 2 propriétés 
+    largeur égale à 200
+    hauteur égale à  50 
+
+    cet objet dispose aussi de deux méthodes  :
+    surface
+        retourner le texte suivant :
+        un rectangle de largeur 200 et de hauteur 50 a une surface de 1000
+
+    perimetre
+        retourner le texte suivant :
+        un rectangle de largeur 200 et de hauteur 50 a un périmètre de 500
+
+    exécuter la méthode surface et afficher son résultat dans la console
+    exécuter la méthode perimetre et afficher son résultat dans la console
+-->
