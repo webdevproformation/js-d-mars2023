@@ -8,9 +8,42 @@
 </head>
 <body>
     <script>
-        // 03-objet.html
+        // 03-objet.html 
+        // concept => arbre / personne / idée / processus
+        // concept matériel ou immatériel
+        // concrêt / ne pas exister 
+        // décrire 
 
+        // etudiant => objet => décrire avec des caractéristiques
+        // 4 propriétés :
+        // nom 
+        // age 
+        // competences
+        // present 
         
+        // dans les langages orientés objet classiques
+        // Java / PHP => pour pouvoir créer des objet il faut au préalable créer une class 
+
+        // pour le langage javascript , 
+        // il est possible de créer des objets DIRECTEMENT des objets => pas besoin de créer d'abord une class => créer un objet 
+        // DIRECTEMENT 
+
+        const etudiant = {  
+            // je viens de créer l'objet etudiant qui contient 4 propriétés
+            // clé : valeur string / number / tableau / boolean
+            nom : "Alain" ,
+            age : 22 ,
+            competences : ["js" , "node"],
+            present : true 
+        }
+
+        // écrire dans la console la phrase suivante 
+        // Alain a 22 ans et maîtrise le js 
+        const phrase = `${etudiant.nom} a ${etudiant.age} ans et maîtrise le ${etudiant.competences[0]}`;
+
+        console.log(phrase);
+
+
     </script>
 </body>
 </html>
