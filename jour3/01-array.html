@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // créer le dossier jour3 
+        // 01-array.html
+
+        const a = [ "a" ,"b" , "c" ];
+        //           0    1
+
+        console.log(a[1]);
+
+        // type de variable est très très pratique stocker dans une seule variable toutes informations liées à un concept
+        
+        const fleurs = ["rose" , "tulipe" , "jasmin", "lilas"] ;
+        // parcourir un tableau => accéder à chaque valeur stockée dans le tableau 
+        // répéter du code // la seule différence c'est l'index
+        console.log(fleurs[0]) // min 0
+        console.log(fleurs[1]) // augmentation de + 1
+        console.log(fleurs[2])
+        console.log(fleurs[3])  // max 3 inclu
+
+        // combo tableau + boucle for 
+        for(let i = 0 ; i < 4 ; i++){
+            console.log(fleurs[i]) ; // dans la boucle remplace l'index par l'incrément 
+        }
+
+        // le tableau fleurs => type c'est un tableau MAIS en Javascript en + de faire en sorte que les données soient stockées dans la variable fleurs
+        // AUTOMATIQUEMENT javascript va transformer la variable fleur en objet 
+
+        // en Javascript quand vous créer un tableau javascript va l' "habiller" comme un objet 
+        // propriété et des méthodes
+        // const fleurs = ["rose" , "tulipe" , "jasmin", "lilas"] ;
+        // fleur tableau ET objet (js qui le fait en +)
+
+        fleurs[0] // rose
+        fleurs[3] // lilas
+        // en + => grande spécificité de Javascript fleurs est AUSSI un objet 
+        // donc vous pouvez écrire : 
+        fleurs.length // donne le nombre d'élément dans le tableau
+        console.log(fleurs.length); // 4 
+        // d => 1100100
+
+        // boucle sur des tableaux 
+        for(let i = 0 ; i < fleurs.length ; i++){ 
+            console.log(fleurs[i]); 
+        }
+        // manière écrire une boucle pour un tableau => classique 1995 en javascript 
+        // ce pattern (manière de créer un boucle)
+        //  et de parcourir un tableau quelquesoit sa taille / son nombre d'éléments   
+
+        // ES6  for in // for of 
+        console.log("nouvelle manière de créer des boucles en js version ES6")
+        for(let f of fleurs){ // pour chaque f (variable ) du tableau fleur 
+            console.log(f) ; 
+        }
+        
+        // f mise dans la boucle for of
+        // blabla est une variable qui n'est utilisable (scope) que dans les {} de la boucle for of
+        // blabla va prendre la valeur de chaque élément du tableau
+        for(let blabla of fleurs){ // pour chaque f (variable ) du tableau fleur 
+            console.log(blabla) ; 
+        }
+        // javascript pas besoin de lui dire min / max et l'incrément 
+
+        let formation  ;  // créer une variable => RAM mais elle n'a pas de valeur ni de type 
+
+        formation = "CDA" ;  // par la suite le code va lui attribuer une valeur 
+        // `` let const () => {}
+
+        const arbres = ["pommier" , "chêne" , "sapin" , "châtaignier"]
+
+        for(let a in arbres){ // objet boucle for in 
+            console.log(arbres[a]); 
+        }
+
+    </script>
+</body>
+</html>

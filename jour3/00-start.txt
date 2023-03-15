@@ -1,0 +1,13 @@
+https://formation.webdevpro.net/js-initiation/ (dans la barre d'adresse pas sur google)
+login : js
+mot de passe : initiation 
+
+https://github.com/webdevproformation/js-d-mars2023
+
+
+git github gitlab 
+
+=> tout javascript sauf Typescript 
+
+01-array.html
+
