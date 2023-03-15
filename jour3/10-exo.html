@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sommaire = [
+            "introduction",
+            "partie 1",
+            "partie 2" ,
+            "partie 3" ,
+            "conclusion"
+        ];
+
+        console.log("solution 1")
+        let r1 = `<section>\n`;
+        for(let i = 0 ; i < sommaire.length ; i++){
+            r1 += `<h2>${sommaire[i]}</h2>\n`
+        }
+        r1 += `</section>`;
+        console.log(r1);
+
+        console.log("solution 2")
+        let r2 = `<section>\n`;
+        for(let partie of sommaire){
+            r2 += `<h2>${partie}</h2>\n`
+        }
+        r2 += `</section>`;
+
+        console.log(r2);
+    </script>
+</body>
+</html>

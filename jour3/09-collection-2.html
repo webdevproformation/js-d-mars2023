@@ -56,6 +56,52 @@
         console.log(resultat3); 
 
     </script>
+    <script type="module">
+        const sommaire =["introduction" ,"partie1" ,"partie2" , "partie3" ,"conclusion"] ;
+        let resultat = `<section> \n`
+                    for(let a of sommaire){
+                        resultat += `<h2>${a}</h2> \n`
+                    }
+                    resultat += `</section>` ;
+                    console.log(resultat) ;
+
+    </script>
+    <script type="module">
+         const sommaire = [ "introduction", "partie 1" , "partie 2", "partie 3" , "conclusion" ] ;
+        let resultat =`
+        <ul>
+            <li>${sommaire[0]}</li>
+            <li>${sommaire[1]}</li>
+            <li>${sommaire[2]}</li>
+            <li>${sommaire[3]}</li>
+            <li>${sommaire[4]}</li>
+        </ul>
+        `
+    
+        console.log(resultat)
+
+    </script>
+    <!-- permet d'éviter les variables s'entrechoquent-->
+    <script type="module">
+        const sommaire = [
+            "introduction" ,
+            "partie 1 ",
+            "partie 2" ,
+            "partie 3" ,
+            "conclusion"
+        ]
+         let resultat = `<section>
+            <h2>${sommaire[0]}</h2>
+            <h2>${sommaire[1]}</h2>
+            <h2>${sommaire[2]}</h2>
+            <h2>${sommaire[3]}</h2>
+            <h2>${sommaire[4]}</h2>
+           
+        </section>
+        `
+        console.log(resultat);
+    </script>
+
 </body>
 </html>
 <!-- 
