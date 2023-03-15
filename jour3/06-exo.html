@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const rectangle ={
+        largeur : 200 ,
+        hauteur : 50,
+        surface (){
+                 return (`un rectangle largeur ${this.largeur} et de hauteur ${this.hauteur} a une surface de  ${this.largeur * this.hauteur}` )
+            } ,
+            perimetre(){
+                return (`un rectangle largeur ${this.largeur} et de hauteur ${this.hauteur} a un périmètre de ${(this.largeur + this.hauteur) / 2}`)
+            }
+        }
+        const phrase = rectangle.surface()
+        const phrase2 = rectangle.perimetre()
+        console.log (phrase)
+        console.log (phrase2)
+    </script>
+</body>
+</html>

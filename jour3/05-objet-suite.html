@@ -94,6 +94,103 @@
         }
 
 
+        const rectangle = { 
+            largeur :200 ,  
+            hauteur : 50 ,
+            surface(){
+                return ` un rectangle de largeur ${this.largeur} $ et de hauteur ${this.hauteur}  a une surface de            (${this.largeur} * $ et de hauteur $ })`
+            }                 
+        }
+        // il faut faire attention à la ponctuation 
+        // =  , ; : "  ` () { } ;
+
+        // fonction de base 
+        function a (){
+        }
+        const b = function(){ }
+
+        // fonction dans un objet => méthode
+        const c = {
+            calcul : function(){}
+        }
+        const d = {
+            division(){}
+        }
+
+        // https://www.pierre-giraud.com/javascript-apprendre-coder-cours/presentation-fonction/
+
+        const rectangle2 = {
+            largeur : 200 ,
+            hauteur :  50 ,
+            surface() {
+                // return 200 * 50
+                return this.largeur * this.hauteur
+            } ,
+            perimetre() {
+                // return ` (200 + 50) /2 `
+                return ` ${(this.largeur + this.hauteur) /2} `
+            } ,
+        }
+        // this ne doit être utilisé QUE dans les méthodes dans des objets
+        // le console.log() et hors de l'objet 
+        //console.log(`this.surface`) ;
+        console.log(rectangle2.surface()) ;
+        //console.log(`this.perimetre`) ;
+        console.log(rectangle2.perimetre()) ;
+
+
+        const rectangle3={
+        largeur:200,
+        hauteut:50,
+        surface(){
+            //return `un rectangle de  largeur${rectongule.largeur} et de hauteur ${surface.largeur*heuteur}`;
+            return `un rectangle de  largeur${this.largeur} et de hauteur ${this .largeur * this.hauteut}`;
+            },
+        périmetre(){
+            //return `un rectangle de ${rectongule.largeur} a un périmetre de${(largeur+heuteur)*2}`
+            return `un rectangle de ${this.largeur} a un périmetre de ${(this.largeur+ this.hauteut)*2}`
+        }
+
+        }
+        const phrase= rectangle3.surface()
+        const phrase1= rectangle3.périmetre()
+        console.log(phrase)
+        console.log(phrase1)
+
+
+
+
+    </script>
+    <script type="module">
+        const rectangle = {
+                largeur : 200,
+                longueur : 50,
+                surface(){
+                return (this.largeur + this.longueur);
+                },
+                perimetre(){
+                return (this.largeur + this.longueur) * 2;
+                },
+            }
+            // TypeError: undefined has no properties
+            //console.log(`Ce rectangle de ${rectangle.largeur} cm sur ${rectangle.longueur} cm a une surface de ${this.surface} cm et un perimetre de ${this.perimetre} cm`)
+            console.log(`Ce rectangle de ${rectangle.largeur} cm sur ${rectangle.longueur} cm a une surface de ${rectangle.surface()} cm et un perimetre de ${rectangle.perimetre()} cm`)
+    </script>
+    <script type="module">
+        const rectangle ={
+        largeur : 200 ,
+        hauteur : 50,
+        surface (){
+                 return (`un rectangle largeur ${this.largeur} et de hauteur ${this.hauteur} a une surface de  ${this.largeur * this.hauteur}` )
+            } ,
+            perimetre(){
+                return (`un rectangle largeur ${this.largeur} et de hauteur ${this.hauteur} a un périmètre de ${(this.largeur + this.hauteur) / 2}`)
+            }
+        }
+        const phrase = rectangle.surface()
+        const phrase2 = rectangle.perimetre()
+        console.log (phrase)
+        console.log (phrase2)
 
     </script>
 </body>
