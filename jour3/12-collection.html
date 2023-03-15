@@ -27,6 +27,68 @@
                 { nom : "Charles" , age : 30 }
             ]
         }
+        // à partir de cette variable formation je veux écrire dans la console
+        /*
+            <section>
+                <h2>CDA</h2>
+                <p>la formation dure 4 mois et est suivie par :</p>
+                <ul>
+                    <li>Alain qui a 20 ans</li>
+                    <li>Céline qui a 12 ans</li>
+                    <li>Charles qui a 30 ans</li>
+                </ul>
+            </section>
+        */
+        const r1 = `
+            <section>
+                <h2>${formation.nom}</h2>
+                <p>la formation dure ${formation.duree} ${formation.unite}  et est suivie par :</p>
+                <ul>
+                    <li>${formation.etudiants[0].nom} qui a ${formation.etudiants[0].age} ans</li>
+                    <li>${formation.etudiants[1].nom} qui a ${formation.etudiants[1].age} ans</li>
+                    <li>${formation.etudiants[2].nom} qui a ${formation.etudiants[2].age} ans</li>
+                </ul>
+            </section>
+        ` ;
+        console.log(r1);
+
+        // -------
+
+        let r2 = `
+            <section>
+                <h2>${formation.nom}</h2>
+                <p>la formation dure ${formation.duree} ${formation.unite}  et est suivie par :</p>
+                <ul>
+        `;
+        for(let i = 0 ; i < formation.etudiants.length ; i++){
+            r2 += `<li>${formation.etudiants[i].nom} qui a ${formation.etudiants[i].age} ans</li>`
+        }
+        r2 += `</ul>
+        </section>`;
+        console.log(r2)
+
+        // -------
+
+        let r3 = `
+            <section>
+                <h2>${formation.nom}</h2>
+                <p>la formation dure ${formation.duree} ${formation.unite}  et est suivie par :</p>
+                <ul>
+        `;
+        for(let e of formation.etudiants){
+            r3 += `<li>${e.nom} qui a ${e.age} ans</li>`
+        }
+        r3 += `</ul>
+        </section>`;
+        console.log(r3)
+
+        // combo objet contiennent propriété / collection
+        // concaténation avec partie fixes + partie avec des boucles 
+    </script>
+        <!-- rdv 15h45 boncafé !! -->
+    <script type="module">
+       
+
     </script>
 </body>
 </html>
