@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+
+        let texte = "bonjour";
+            texte += " les amis";
+        
+            // écrire le texte suivant 
+            /*
+            <ul>
+                <li>js</li>
+                <li>node</li>
+                <li>mongodb</li>
+                </ul>
+                */
+        const matieres = ["js","node", "mongodb", "angular", 'java', "..."];
+        let resultat1 = `
+            <ul>
+                <li>${matieres[0]}</li>
+                <li>${matieres[1]}</li>
+                <li>${matieres[2]}</li>
+                <li>${matieres[3]}</li>
+                <li>${matieres[4]}</li>
+                <li>${matieres[5]}</li>
+            </ul>
+        `;
+        //console.log(resultat1);
+            document.querySelector("div").innerHTML = resultat1; 
+        
+        // équivalent
+
+        let resultat2 = `<ul>\n`;
+        for(let i = 0 ; i <= 5 ; i++){
+            resultat2 += `<li>${matieres[i]}</li>\n`
+        }
+        resultat2 += `</ul>` ;
+
+        console.log(resultat2); 
+
+        // équivalent
+
+        let resultat3 = `<ul>\n`;
+        for(let a of matieres){
+            resultat3 += `<li>${a}</li>\n`
+        }
+        resultat3 += `</ul>`
+
+        console.log(resultat3); 
+
+    </script>
+</body>
+</html>
