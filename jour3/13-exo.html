@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const panier = {
+            client : "John Doe" ,
+            dt : "15/03/2023",
+            boutique : "ma super boutique",
+            produits : [  
+                {id : 1 , nom : "PS4" , prix : 100 , qte : 1},
+                {id : 2 , nom : "Nintendo" , prix : 400 , qte : 2},
+                {id : 3 , nom : "PS5" , prix : 500 , qte : 1},
+            ]
+        };
+
+        const r1 = `
+        <main>
+            <h2>panier du ${panier.client} du ${panier.dt}</h2>
+            <p>acheté depuis la boutique ${panier.boutique}</p>
+            <h3>détail du panier :</h3>
+            <ul>
+                <li>produit : ${panier.produits[0].nom} - prix : ${panier.produits[0].prix} € - quantité : ${panier.produits[0].qte} </li>
+                <li>produit : ${panier.produits[1].nom} - prix : ${panier.produits[1].prix} € - quantité : ${panier.produits[1].qte} </li>
+                <li>produit : ${panier.produits[2].nom} - prix : ${panier.produits[2].prix} € - quantité : ${panier.produits[2].qte} </li>
+            </ul>
+            <p>total :  ${panier.produits[0].prix * panier.produits[0].qte + panier.produits[1].prix * panier.produits[1].qte + panier.produits[2].prix * panier.produits[2].qte} €  </p> 
+        </main>`
+        console.log(r1)
+
+        // boucle dans notre concaténation 
+        let r2 = `<main>
+            <h2>panier du ${panier.client} du ${panier.dt}</h2>
+            <p>acheté depuis la boutique ${panier.boutique}</p>
+            <h3>détail du panier :</h3>
+            <ul>`;
+        let total = 0 ;
+        for(let i = 0 ; i < panier.produits.length ; i++){
+            r2 += `<li>produit : ${panier.produits[i].nom} - prix : ${panier.produits[i].prix} € - quantité : ${panier.produits[i].qte} </li>\n`;
+            total += panier.produits[i].prix * panier.produits[i].qte ;
+        }
+        r2 += `</ul><p>total : ${total} €</p>
+        </main>`
+        console.log(r2);
+    </script>
+</body>
+</html>

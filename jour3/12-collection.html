@@ -86,26 +86,46 @@
         // concaténation avec partie fixes + partie avec des boucles 
     </script>
         <!-- rdv 15h45 boncafé !! -->
+    <script type="module">
+        const panier={
+            client:"john doe",
+            dt:"15/03/2023",
+            boutique:"ma super boutique",
+            produit:[
+                {id:1, nom:"ps4", prix:100,qte:1},
+                {id:2, nom:"nentendo", prix:400,qte:2},
+                {id:3, nom:"ps5", prix:500,qte:3},
+            ]
+        }
+        let r1=`<main>
+            <h2> panier de ${panier.client} du ${panier.dt}</h2>
+            <p>acheté depuis la boutique ma ${panier.boutique}</p>
+            <h3>detail de panier </h3>`
+        r1 +=`<ul>`
+
+        for(let e of panier.produit){
+            r1 +=`<li>${e.nom} - prix : ${e.prix} € - quantité :  ${e.qte}</li>`
+        }
+        r1+=`</ul>`
+        r1+=`</main>`
+        console.log(r1)
+
+    </script>
 </body>
 </html>
 <!-- 
 
     créer le fichier 13-exo.html
-
     panier est un objet qui contient 4 propriétés :
-
         client : "John Doe" ,
         dt : "15/03/2023",
         boutique : "ma super boutique",
-
         produits : [  // cette propriété est un tableau d'objet 
             {id : 1 , nom : PS4 , prix : 100 , qte : 1},
             {id : 2 , nom : Nintendo , prix : 400 , qte : 2},
             {id : 3 , nom : PS5 , prix : 500 , qte : 1},
         ]
-
     écrire dans la console le texte suivante :
-    
     <main>
             <h2>panier du John Doe du 15/03/2023</h2>
             <p>acheté depuis la boutique ma super boutique</p>
