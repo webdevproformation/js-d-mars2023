@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 07-collection.html
+
+        // mixer tableau et des objets 
+        const bdd = [ // mini base de données (collection)
+            { 
+                id : 1 , 
+                nom : "Alain" , 
+                age : 20  , 
+                competences : ["js"] ,
+                description(){
+                    return `${this.nom} a ${this.age} ans `
+                }
+            },
+            { id : 2 , nom : "Céline" , age : 40 , isAdmin : true  }
+        ]; 
+        // MongoDB ET API 
+        // bdd => array 
+        // chaque élément du tableau est un objet ;
+        // tableau d'objet => collection 
+        //bdd.length
+        //parcourir for / for in / for of 
+        // Alain maîtrise le js 
+        console.log(`${bdd[0].nom} maîtrise le ${bdd[0].competences[0]}`)
+        console.log(bdd[0].description()); 
+
+        // for in / for of 
+        // syntaxe que l'on utilise AVEC objet ou avec array 
+        // permet de parcourir un tableau ou un objet 
+
+        const a = [1,2] ;
+
+        for(let chiffre of a){
+            console.log(chiffre)
+        }
+
+        for(let index in a){
+            console.log(chiffre[index])
+        }   
+        
+
+    </script>
+</body>
+</html>
