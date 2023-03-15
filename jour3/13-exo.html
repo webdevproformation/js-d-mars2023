@@ -47,6 +47,23 @@
         r2 += `</ul><p>total : ${total} €</p>
         </main>`
         console.log(r2);
+
+
+        // boucle dans notre concaténation 
+        let r3 = `<main>
+            <h2>panier du ${panier.client} du ${panier.dt}</h2>
+            <p>acheté depuis la boutique ${panier.boutique}</p>
+            <h3>détail du panier :</h3>
+            <ul>`;
+        let total2 = 0 ;
+        for(let p of panier.produits){
+            r3 += `<li>produit : ${p.nom} - prix : ${p.prix} € - quantité : ${p.qte} </li>\n`;
+            total2 += p.prix * p.qte ;
+        }
+        r3 += `</ul><p>total : ${total} €</p>
+        </main>`
+        console.log(r3);
+
     </script>
 </body>
 </html>
