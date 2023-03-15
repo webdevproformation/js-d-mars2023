@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 08-collection-suite.html
+        // tout utiliser en même 
+        // créer une collection qui contient des objets avec des propriétés / méthodes
+        // parcourir avec boucle 
+
+        // créer un site internet 
+        // page contient un article / commentaires 
+
+        const article = { 
+            titre : "Premier article sur js",
+            contenu : "lorem ipsum" ,
+            image : "https://via.placeholder.com/400x200",
+            dt_publication : "15/03/2023",
+            commentaires : [
+                { id : 1 , email : "alain@yahoo.fr" , message : "super article" },
+                { id : 2 , email : "alain@yahoo.fr" , message : "bonjour" },
+                { id : 3 , email : "celine@yahoo.fr" , message : "bienvenue sur le site !" }
+            ]
+        }; 
+        // extrait toutes les données de la page web => stocké dans l'objet article 
+        // écrire dans la console du navigateur le texte suivant 
+        // texte qui contient du html 
+        /*
+            <article>
+                <h2>Premier article sur js</h2>
+                <img src="https://via.placeholder.com/400x200" alt="">
+                <p>lorem ipsum</p>
+                <p>publié le 15/03/2023</p>
+                <ul>
+                    <li>alain@yahoo.fr a dit "super article<"/li>
+                    <li>alain@yahoo.fr a dit "bonjour"</li>
+                    <li>celine@yahoo.fr a dit "bienvenue sur le site !"</li>
+                </ul>
+            </article>
+        */
+        // tout mixer en même temps 
+            let resultat = `<article>
+                <h2>${article.titre}</h2>
+                <img src="${article.image}" alt="">
+                <p>${article.contenu}</p>
+                <p>publié le ${article.dt_publication}</p>
+            <ul>`;
+                // concaténation avec objet 
+            for(let commentaire of article.commentaires){
+                resultat += `<li>${commentaire.email} a dit "${commentaire.message}"</li>\n`
+            }
+            // commentaires => propriété article
+            // commentaire => variable remplie automatiquement
+            // par la boucle for of 
+            // boucle for of sur une propriété de l'objet article qui est un tableau 
+            // commentaires qui est un tableau 
+            // += opérateur unaire de concaténation 
+            resultat += `</ul>
+            </article>`;
+            // fin de la concaténation // emmet => html dans une balise script 
+        
+        console.log(resultat); // => affichage du contenu de la variable resultat 
+        // dans la console
+
+    </script>
+</body>
+</html>
