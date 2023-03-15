@@ -11,3 +11,10 @@ git github gitlab
 
 01-array.html
 
+https://formation.webdevpro.net/js-initiation/ (dans la barre d'adresse pas sur google)
+login : js
+mot de passe : initiation
+
+malik.h@webdevpro.net
+
+

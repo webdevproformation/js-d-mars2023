@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 14-objet-natif.html 
+
+        // objet que le développeur a créé lui même 
+        const a = {
+            prop : 10 ,
+            prop1 : "texte",
+            prop2 : [{} , [] , "string"]
+        }
+
+        // par défaut Javascript va mettre à dispose des objets natifs 
+
+        // chaque type que nous avons vue ensemble 
+        // string 
+        // number
+        // boolean
+        // array
+        // object 
+
+        // en + des valeurs que l'on va leur affecter, javascript va les transformer en objet 
+
+        const b = "bienvenue" ; // en + de la valeur "bienvenue" qui est stockée dans b
+        // javascript va ajouter de propriétés et des méthodes à la variable b 
+        // ces méthodes sont ajoutées AUTOMATIQUEMENT par javascript 
+
+        console.log(b.length) // le nombre de lettre dans la string  9 
+        b.toUpperCase()
+
+        const c = "BONJOUR"; 
+        console.log(c.toLowerCase());
+
+        // MDN string
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+
+        // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split
+
+        const phrase = "je découvre javascript en 3 jours" ;
+
+        console.log(phrase.split(" "));  // je viens de transformer phrase en un tableau
+        console.log(phrase.split(" ")[2]);  // je viens de transformer phrase en un tableau et je viens de récupérer le 3 ème mot (celui qui est positionné à l'index 2)
+
+        console.log(phrase.split(" ")[2].toUpperCase()); // JAVASCRIPT 
+        console.log(phrase.split(" ")[2].toUpperCase()[1].toLowerCase()); // a
+
+        // https://docs.google.com/forms/d/e/1FAIpQLSdMguxS175naDdi7RikS4rGQVJUgdMtNapYeUiG3WXChcU5wA/viewform
+
+        let zz = 1 + 5 + "10" + 2
+        console.log(zz)
+
+        // tout le vocabulaire de base de javascript => théorique 
+        // PHP => Java 
+        // DOM => page web !! 
+
+        let d = true || false && true
+        //      true ||     false 
+        //          true 
+        
+
+
+    </script>
+</body>
+</html>
