@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //const etudiant = ["Alain" , "Céline" , "Charles"]
+
+        const etudiants = [ // tableau d' objets 
+            { nom : "Alain" , age : 20},
+            { nom : "Céline" , age : 12} ,
+            { nom : "Charles" , age : 30 }
+        ];
+
+        /*
+            <section>
+                <p>Alain a 20 ans</p>    
+                <p>Céline a 12 ans</p>    
+                <p>Charles a 30 ans</p>    
+            </section>
+        */
+       let r1 = `
+        <section>
+            <p>${etudiants[0].nom} a ${etudiants[0].age} ans</p>
+            <p>${etudiants[1].nom} a ${etudiants[1].age} ans</p>
+            <p>${etudiants[2].nom} a ${etudiants[2].age} ans</p>
+        </section>
+       `
+       console.log(r1);
+
+
+        let r2 = `<section>` ;
+        for(let i = 0 ; i < etudiants.length ; i++){
+            r2 += `<p>${etudiants[i].nom} a ${etudiants[i].age} ans</p>` 
+        }
+        r2 += `</section>`;
+        console.log(r2);
+
+        // -----------------
+
+        let r3 = `<section>`
+        for(let e of etudiants){
+            r3 += `<p>${e.nom} a ${e.age} ans</p>` 
+        }
+        r3 += `</section>`;
+        console.log(r3);
+    </script>
+</body>
+</html>

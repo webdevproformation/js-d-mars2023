@@ -30,8 +30,24 @@
             r2 += `<h2>${partie}</h2>\n`
         }
         r2 += `</section>`;
-
         console.log(r2);
+
+        console.log("solution 3")
+        let r3 = `<section>\n`;
+        for(let index in sommaire){
+            r3 += `<h2>${partie}</h2>\n`
+        }
+        r3 += `</section>`;
+        console.log(r2);
+    </script>
+    <script type="module">
+        const sommaire=["introduction","partie1","partie2","partie3","conclusion"];
+        let r1= "<section>";
+        for(let a of sommaire ){
+            r1 += ` <h2>  ${a} </h2>`
+        }
+        r1 += `</section>`;
+        console.log(r1);
     </script>
 </body>
 </html>
