@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section></section>
+    <section></section>
+    <section></section>
+    <script>
+        const sections = document.querySelectorAll("section");
+
+        // section 1
+        sections[0].innerHTML = `<img src="https://via.placeholder.com/100x80" alt="">`
+
+        // section 2
+        const articles = [
+            { titre : "premier article" , contenu : "lorem ipsum" },
+            { titre : "deuxieme article" , contenu : "lorem ipsum" }
+        ];
+        let htmlSection2 = ``;
+        for(let a of articles){
+            htmlSection2 += `<article>
+                    <h2>${a.titre}</h2>
+                    <p>${a.contenu}</p>
+                </article>
+                `
+        }
+        sections[1].innerHTML = htmlSection2 ;
+
+        // section 3
+        sections[2].innerHTML = `Malik H - ${(new Date()).getFullYear()}`;
+    </script>
+    <style>
+        body{
+            display: grid;
+            margin: 10px 0;
+            min-height: calc( 100vh - 20px ) ;
+        }
+        section{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        section:last-of-type{
+            align-self: flex-end;
+        }
+    </style>
+</body>
+</html>
