@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        // grace à javascript 
+        // remplir dynamiquement via js la balise div avec le texte (qui contient du html ) suivant :
+        /*
+            <article>
+                <h2>premier article</h2>
+                <img src="https://via.placeholder.com/400x200" alt=""> 
+            </article>
+            <article>
+                <h2>deuxieme article</h2>
+                <img src="https://via.placeholder.com/400x200" alt=""> 
+            </article>
+            <article>
+                <h2>troisieme article</h2>
+                <img src="https://via.placeholder.com/400x200" alt=""> 
+            </article>
+            // variable et boucle 
+            // injecter dans la page web 10h45 @ toute suite !!
+        */
+       // créer une variable qui va contenir le titre et l'url de l'image
+       // abstraction => extraire du texte précédent les titres et url => ranger dans un tableau d'objet
+       // collection 
+        const articles = [ // base de données
+            { 
+                titre : "premier article",
+                url : "https://via.placeholder.com/400x200"
+            },
+            {
+                titre : "deuxieme article",
+                url : "https://via.placeholder.com/400x200"
+            },
+            {
+                titre : "troisieme article",
+                url : "https://via.placeholder.com/400x200"
+            }
+        ];
+
+        let htmlArticles = ""; // traitement boucle et concaténation
+        for(let article of articles){
+            htmlArticles += `
+                <article>
+                    <h2>${article.titre}</h2>
+                    <img src="${article.url}" alt="">
+                </article>`
+        }
+
+        //console.log(htmlArticles)
+        // injection d'une chaine de caractère dans le DOM
+        document.querySelector("div").innerHTML = htmlArticles ;
+
+    </script>
+</body>
+</html>
