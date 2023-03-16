@@ -8,12 +8,49 @@
 </head>
 <body>
     <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li></li><!-- 0 -->
+        <li></li><!--  1 -->
+        <li></li><!--  2 -->
     </ul>
     <script>
         // 08-document-suite.html 
+        document.querySelector("li").innerHTML = "first item -  premier élément"; 
+        // je ne peux modifier QUE la première balise li de la page
+
+        const liste = document.querySelectorAll("li") // permet de récupérer TOUTES les balises li de la page
+        // liste est un tableau d'objets [li , li , li]
+        console.log(liste); 
+        liste[1].innerHTML = "je suis le 2ème li";
+
+        liste[2].innerHTML = "je suis le dernier li";
+
+        liste[0].innerHTML = "je suis le premier";
     </script>
 </body>
 </html>
+
+<!-- 
+    créer le fichier 09-exo.html 
+
+    dans ce fichier vous allez d'abord écrire 3 section
+    <section></section>
+    <section></section>
+    <section></section>
+    suivi d'une balise <script>
+
+        dans la première section injecter le texte qui contient le html suivant
+        <img src="https://via.placeholder.com/100x80" alt="">
+
+        dans la deuxieme section injecter le texte qui contient le html suivant
+        <article>
+            <h2>article 1</h2>
+            <p>lorem ipsum</p>
+        <article>
+        <article>
+            <h2>article 2</h2>
+            <p>lorem ipsum</p>
+        <article>
+
+         dans la dernière section injecter le texte qui contient le html suivant  
+            prénom - 2013
+-->
