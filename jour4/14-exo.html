@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        const div = document.querySelectorAll("div");
+
+        div[0].innerHTML = `<h1>je suis un exercice</h1>`
+        div[0].setAttribute("class", "first");
+        div[0].style.textAlign = "center";
+
+        const articles = [
+            {titre : "article 1" , contenu : "lorem ipsum 1"},
+            {titre : "article 2" , contenu : "lorem ipsum 2"}
+        ]
+        let html = ``;
+        for(let a of articles){
+            html += `
+                <article>
+                    <h2>${a.titre}</h2>
+                    <p>${a.contenu}</p>
+                </article>`;
+        }
+        div[1].innerHTML = html ;
+        div[1].setAttribute("class", "main");
+        div[1].style.display = "flex";
+        div[1].style.justifyContent = "center";
+        const articlesDansMain = div[1].querySelectorAll("article")
+        for(let i = 0 ; i < articlesDansMain.length ; i++){
+            articlesDansMain[i].style.border = "1px solid black";
+            articlesDansMain[i].style.padding = "10px";
+            if(i === 0){
+                articlesDansMain[i].style.marginRight = "10px";
+            }
+        }
+        div[2].innerHTML = `Malik H - ${(new Date()).getFullYear()}`;
+        div[2].setAttribute("class", "footer");
+        div[2].style.fontWeight = 900 ; 
+        div[2].style.textAlign = "center" ; 
+        div[2].style.marginTop = "20px" ; 
+    </script>
+</body>
+</html>
