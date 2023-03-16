@@ -61,3 +61,69 @@
     2 dernier p => remplir avec le texte fin du document 
 
 -->
+
+<!-- correction pour Lakssami -->
+<body>
+    <h1></h1>
+    <p class="introduction"></p>
+    <p class="introduction"></p>
+    <p class="introduction"></p>
+    <h2 class="partiel"></h2>
+    <p id="first"></p>
+    <p id="middle"></p>
+    <p class="end"></p>
+    <h2 id="conclusion"></h2>
+    <p class="findocument"></p>
+    <p class="findocument"></p>
+<script>
+    document.querySelector("h1").innerHTML = "Exo 11";
+    document.querySelector(".introduction:first-child").innerHTML = "lorem ipsum";
+    document.querySelector(".introduction:nth-child(2)").innerHTML = "lorem ipsum";
+    document.querySelector(".introduction:last-child").innerHTML = " fin du lorem ipsum";
+    document.querySelector(".partiel").innerHTML = "Partie 1";
+    document.querySelector("#first").innerHTML = "lorem ipsum";
+    document.querySelector("#middle").innerHTML = "partie centrale du document";
+    document.querySelector(".conclusion").innerHTML = "le dernier mot";
+    document.querySelectorAll(".findocument")[0].innerHTML = "remplir avec le texte fin du document";
+    document.querySelectorAll(".findocument")[1].innerHTML = "remplir avec le texte fin du document";
+
+</script>
+
+<!-- fin correction pour Lakssami -->
+
+<!--  correction pour Felicia -->
+<h1></h1>
+    <p class="introduction"></p>
+    <p class="introduction"></p>
+    <p class="introduction"></p>
+    
+    <h2 class="partie1"></h2>
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <h2 id="conclusion"></h2>
+    <p></p>
+    <p></p>
+        <script>
+            document.querySelector("h1").innerHTML = "Exo 11" ;
+
+            document.querySelectorAll(".introduction")[0].innerHTML = "lorem ipsum" ;
+            document.querySelectorAll(".introduction")[1].innerHTML = "lorem ipsum" ;
+
+            document.querySelector("p.introduction:last-child").innerHTML ="fin du lorem ipsum" ;
+
+            document.querySelector(".partie1").innerHTML ="Partie 1"
+
+            document.querySelectorAll("p")[3].innerHTML = "partie centrale du document" ;
+            document.querySelectorAll("p")[4].innerHTML = "partie centrale du document" ;
+            document.querySelectorAll("p")[5].innerHTML = "partie centrale du document" ;
+
+            document.querySelector("#conclusion").innerHTML ="le dernier mot" ;
+
+            document.querySelectorAll("p")[6].innerHTML = "remplir avec le texte fin du document" ;
+            document.querySelectorAll("p")[7].innerHTML = "remplir avec le texte fin du document" ;
+
+    </script>
+<!--  fin correction pour Felicia -->
