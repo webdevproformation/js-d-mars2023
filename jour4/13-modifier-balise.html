@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child{
+            color : yellow;
+        }
+    </style>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p>
+        texte ici
+        <span>texte là</span>
+        <script>
+            const a = 1; 
+        </script>
+    </p>
+    <p></p>
+    <p></p>
+    <script>
+        // 13-modifier-balise.html
+        const p = document.querySelectorAll("p") ;
+
+        // remplir de texte : "premier texte"
+        // modifier sa mise en forme texte taille 30px
+        // modifier sa mise en forme texte soit centré dans la page 
+
+        p[0].innerText = "premier texte";
+        // innerText => le html  <br> dans la string est écrit
+        p[0].style.fontSize = "60px"; 
+        p[0].style.textAlign = "center"; 
+
+        p[1].innerHTML = "deuxieme <br> texte";
+        // innerHTML => le html  <br> dans la string est exécuté
+        p[1].style.color = "red";
+        p[1].style.textDecoration = "underline"; 
+        p[1].style.textShadow = "1px 1px 5px black"; 
+
+        console.log(p[2].innerText);
+        console.log(p[2].textContent);
+        // https://developer.mozilla.org/fr/docs/Web/API/Node/textContent
+    
+        p[3].innerHTML = "je suis le 3ème p";
+        p[3].style.border = "1px solid black";
+        p[3].style.padding = "10px 20px"
+        p[3].style.setProperty("color" , "red", "important");
+        p[3].setAttribute("id", "exemple")
+        p[3].setAttribute("class", "exemple2")
+        // vous m'entendez ???
+
+        const c = getComputedStyle(p[0]).textAlign 
+        console.log(c); 
+    </script>
+    <style>
+       /*  p:first-child{
+            font-size: 30px;
+        } */
+    </style>
+</body>
+</html>
+<!-- 
+    export function Menu(){
+        const [text, setText] = useState( "texte <br> texte" )
+        function t(){
+            return text ;
+        }
+        return <p>{t()}</p>
+    }
+-->
