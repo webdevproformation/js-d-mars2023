@@ -58,7 +58,21 @@
         //console.log(htmlArticles)
         // injection d'une chaine de caractère dans le DOM
         document.querySelector("div").innerHTML = htmlArticles ;
-
     </script>
+    <style>
+        /* mise en forme en css */
+        div{
+            font-family: sans-serif;
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap : 10px;
+        }
+        img{
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    </style>
 </body>
 </html>
