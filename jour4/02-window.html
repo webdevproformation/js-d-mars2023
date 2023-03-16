@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(window); 
+        // window est un objet => comment de propriété il y a dans cet objet window ??
+        /* const window = {
+            document : {
+                ... 
+            },
+            location : {}
+            ...
+        } */
+        let i = 0 ;
+        for(let prop in window){ 
+            // prop est une variable qui est remplie par la boucle for in 
+            // for in objet 
+            i++
+            console.log(prop)
+        };
+        console.log(i); // window est un objet qui contient 230 propriétés 
+        // chaque propriété est elle meme un  objet  
+
+        let j = 0 ;
+        for(let prop in window.document){
+            j++
+        };
+        console.log(j);
+
+        let tableau = [1,2,3,4]
+        for(let prop of tableau){
+
+        }
+
+        // et là ??? vous m'entendez ???
+        // je redémarre l'ordinateur pour voir si ça change quelquechose 
+        // je ne peux pas me mettre en rj45 ... 
+        // tu lis ce que j'écris ??? 
+
+        // je redémarre le PC @ toute suite !! 
+
+
+
+
+
+    </script>
+</body>
+</html>

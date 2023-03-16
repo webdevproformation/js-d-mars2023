@@ -1,0 +1,49 @@
+jour1 / jour2 et jour3 => Vocabulaire de base de l'informatique 
+=> variable / constante
+=> type string number boolean array objet
+=> structures if for function 
+=> traitement associés aux types 
+
+=> bases de l'informatique 
+
+for() for of  => while(){} 
+[].forEach(function(){}) !! 
+
+console.log() // prompt() // alert() // confirm()
+
+if(a > 10 || a < 20){ .... }
+else if(){}
+else {}
+
+switch(a){ => Redux => React Native 
+    case 1,2,3,4,5 : // est ce que a === 20 (valeur discrète)
+        .....
+        break ;
+    case 10 :
+        .....
+        break ;
+    default :
+}
+
+----------------------  
+
+A partir de maintenant => DOM => très spécifique à javascript 
+la spécialité de javascript => capacité à manipuler le DOM => la page web 
+
+DOM Document Object Model
+
+moteur javascript un des éléments qui compose le navigateur web 
+automatiquement lancé 
+
+tout ce que vous voyez dans le navigateur barre d'adresse / logo / les couleurs 
+la disposition .... stocké par javascript 
+
+dans un objet window 
+
+window => mot clé du langage javascript let const + = += && 
+tout en minuscule 
+
+window à ne pas confondre avec Windows (le système d'exploitation)
+
+window est un objet => qui contient TOUT 
+

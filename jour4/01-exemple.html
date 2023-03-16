@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const bdd = [
+            { 
+                id :1 , 
+                nom:"alan", 
+                age:20, 
+                competences:["js"] 
+            },
+            { 
+                id:2, 
+                nom :"celine", 
+                age:40, 
+                isAdmin:true,
+                description(){ 
+                    return `${this.nom} a ${this.age} ans`
+                }
+            }
+        ] ;
+         const etudiant = {  
+            // je viens de créer l'objet etudiant qui contient 4 propriétés
+            // clé : valeur string / number / tableau / boolean
+            nom : "Alain" ,
+            age : 22 ,
+            competences : ["js" , "node"],
+            present : true 
+        }
+        const a = { nom : "Alain" } ;
+        // alert(a); // [object Object]
+        
+        const b = 20 ;
+
+        // debugger ; // point d'arret
+        console.log(b);
+    </script>
+</body>
+</html>
