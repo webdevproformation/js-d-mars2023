@@ -47,3 +47,7 @@ window à ne pas confondre avec Windows (le système d'exploitation)
 
 window est un objet => qui contient TOUT 
 
+support sur js et DOM 
+https://formation.webdevpro.net/js-dom
+login : js 
+password : web 
