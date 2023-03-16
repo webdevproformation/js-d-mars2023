@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="premier"></p>
+    <p class="deuxieme"></p>
+    <ul>
+        <li id="first"></li>
+        <li class="item" id="second"></li>
+        <li id="last"></li>
+        <li></li>
+    </ul>
+
+    <h1 class="conclusion finale"></h1>
+    <p class="finale"></p>
+    <script>
+        // selecteur 
+        // sélectionne la première balise p via son tag 
+        document.querySelector("p").innerHTML = "Bienvenue";
+        // il est aussi possible de sélectionner une balise via ses attributs 
+        // sélectionner la première balise qui a l'attribut class="deuxieme"
+        document.querySelector(".deuxieme").innerHTML = "je suis un p avec la class deuxieme" ; 
+
+        // sélectionner la balise qui a l'attribut id="first"
+        document.querySelector("#first").innerHTML = "je suis le 1er li";
+        document.querySelector("#last").innerHTML = "je suis le dernier li";
+        document.querySelector(".item#second").innerHTML = "je suis le li du milieu";
+
+        // dans la balise ul sélection le dernier li 
+        document.querySelector("ul li:last-child").innerHTML = "je suis le vrai dernier li";
+        // attention dans la méthode querySelector("...") querySelectorAll("...")
+        // mettre un sélecteur css tag / attribut ou plusieurs attributs / position dans la page web
+        document.querySelector(".conclusion.finale").innerHTML = "titre de la conclusion"
+        document.querySelector("p.finale").innerHTML = "lorem ipsum"; 
+    </script>
+</body>
+</html>
