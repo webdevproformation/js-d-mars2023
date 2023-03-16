@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Action 1</button>
+    <button>Action 2</button>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <script>
+        // 15-event.html
+        const button = document.querySelectorAll("button");
+        button[0].style.border = "3px solid red"; 
+        button[0].setAttribute("class", "first"); 
+        button[0].innerText = "gestion des évènements avec js" ; 
+        // il est possible d'associer à une balise un écouteur d'évènement
+        // lorsque je réalise une action => cliquer sur le bouton 
+        // déclencher un traitement 
+        // addEventListener() méthode
+        // cette méthode prend 2 arguments 
+        // 1er argument => nom de l'évènement
+        // 2ème callback (fonction) => lors l'on met une fonction anonyme comme paramètre d'une autre fonction
+        button[0].addEventListener( "click" , function(){} )
+        button[0].addEventListener("click" , function(){
+            // ajouter les traitements à réaliser par js lorsque l'on clique sur bouton
+            document.querySelector("p").style.display = "none";
+        }); 
+
+        button[1].addEventListener("click" , function(){
+            document.querySelector("p").style.display = "block";
+        })
+
+
+       /*  button[0].addEventListener("click" , () => {
+            // ajouter les traitements à réaliser par js lorsque l'on clique sur bouton
+            document.querySelector("p").style.display = "none";
+        }) */
+
+    </script>
+</body>
+</html>
