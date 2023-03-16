@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const creations = [
+        {
+          titre: "Création 1",
+          phrase: "voici ma première création :",
+          url: "https://via.placeholder.com/400x200",
+        },
+        {
+          titre: "Création 2",
+          phrase: "réalisé lors de la formation en js très trèstrèstrèstrèstrès très très très très très :",
+          url: "https://via.placeholder.com/400x200",
+        },
+        {
+          titre: "Création 3",
+          phrase: "réalisé pendant la formation NodeJS",
+          url: "https://via.placeholder.com/400x200",
+        },
+        {
+          titre: "Création 4",
+          phrase: "réalisé via React native:",
+          url: "https://via.placeholder.com/400x200",
+        },
+      ];
+
+    let htmlCreations = `<section>`;
+    for(let c of creations){
+        htmlCreations += `
+            <article>
+                <h2>${c.titre}</h2>
+                <p>${c.phrase}</p>
+                <img src="${c.url}" alt="">
+            </article>`;
+    }
+    htmlCreations += `</section>`;
+
+    document.querySelector("div").innerHTML = htmlCreations ;
+
+    </script>
+    <style>
+        div{
+            font-family: sans-serif;
+            width: 1000px;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        section{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap : 10px
+        }
+        article{
+            display: grid;
+        }
+        img{
+            max-width: 100%;
+            align-self: flex-end;
+        }
+    </style>
+</body>
+</html>
