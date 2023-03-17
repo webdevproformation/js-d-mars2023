@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<button data-show="1">Action1</button>
+<p> je suis bien dormir </p>
+<script>
+    document.querySelectorAll("button")[0].addEventListener("click" ,function () {
+            const show = parseInt(this.dataset.show) ;
+            if(show === 0){
+                this.dataset.show = "1";
+                document.querySelector("p").style.display = "block"
+                //this.innerText = "1";
+        }else {
+                this.dataset.show = "0";
+                document.querySelector("p").style.display = "none"
+        }
+    });
+    </script>
+</body>
+</html>
+<!-- 07-form.html -->
