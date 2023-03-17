@@ -7,13 +7,72 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- 07-form.html -->
     <form>
         <input type="text" id="nom" placeholder="saisir votre nom">
         <input type="number" id="age" placeholder="saisir votre age">
-        <input type="submit">
+        <input type="submit" class="envoyer">
     </form>
+    <div></div>
     <script>
-        
+        // lorsque je soumets mon formulaire : 2 manières de procéder 
+        // écoute quand on clique sur le bouton 
+        // écoute lorsque l'on soumet le formulaire
+
+        // lié aux formulaires => il faut bloquer le chargement automatique 
+        // de la page
+
+        // récupérer les valeurs saisies dans les différents champs 
+        // et insérer dans la page => remplir leur texte dans la balise div 
+
+        document.querySelector(".envoyer").addEventListener("click", function(e){
+            // e : event objet qui est généré automatiquement par javascript 
+            // va permet d'obtenir des informations sur la nature de l'évènement qui est en train d'être exécuté
+            e.preventDefault(); // bloquer le rechargement automatique de la page web 
+            const nom = document.querySelector("#nom").value ; 
+            /* {
+                value : "20",
+                id : "nom",
+                placeholder : "saisir votre nom"
+            } */
+            // document.querySelector("#age").value === "20"
+            // parseInt(document.querySelector("#age").value) === parseInt("20") === 20
+            // document.querySelector("#age").valueAsNumber === 20
+            const age = parseInt(document.querySelector("#age").value) ;
+            const age2 = document.querySelector("#age").valueAsNumber ; 
+            console.log(nom , age , age2);
+
+            document.querySelector("div").innerHTML += `<p>${nom} a ${age} ans</p>`;
+
+            // vider les champs du  formulaire 
+            /* document.querySelector("#nom").value = "";
+            document.querySelector("#age").value = "" */
+           
+            document.querySelector("form").reset(); 
+        })
+
+        document.querySelector("form").addEventListener("submit", function(e){
+            e.preventDefault();  // bloquer le rechargement automatique de la page web 
+        })
+
+        // jsx => mix html / js / xml 
+        // jsx => React js 
+        // jsx => React native 
+
     </script>
 </body>
 </html>
+<!-- 
+    créer le fichier 08-exo.html
+    formulaire dans lequel vous allez insérer des champs 
+        input de type texte => sujet 
+        input de type number => duree
+        menu déroulant select => 3 valeurs france / allemagne / belgique 
+        bouton de soumission 
+
+    div
+    ajouter à la suite une balise script 
+    lorsque vous soumettez le formulaire récupérer les valeurs des 3 champs 
+    insérer dans la balise div 
+
+-->
