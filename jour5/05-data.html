@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ajouter dans chaque bouton un attribut qui est préfixé par le mot clé data-->
+    <!--  https://developer.mozilla.org/fr/docs/Web/HTML/Global_attributes/data-* 
+        dans html5 => vous pouvez ajouter des attributs data-nom="texte" data-test="true" data-id="1"
+    -->
+    <button data-largeur="20" data-hauteur="5balbal5" data-unite="cm">calculer surface rectangle</button>
+    <button>Action 2</button>
+    <script>
+        document.querySelectorAll("button")[0].addEventListener("click", function(){
+            //const largeur = this.getAttribute("data-largeur");
+            const largeur = parseInt(this.dataset.largeur) ; 
+            const hauteur = parseInt(this.dataset.hauteur); 
+            console.log(hauteur); // 5 / NaN
+            if(!Number.isInteger(hauteur)){
+                throw new Error("hauteur n'est pas un chiffre valide")
+            }
+            const unite = this.dataset.unite ; 
+            console.log(`${largeur * hauteur} ${unite}²`); // 1000
+            // parseInt("20") => 20 
+        })
+    </script>
+</body>
+</html>
+<!-- 
+    créer un fichier 06-exo.html 
+
+    bouton qui a comme attribut data-show="1" et comme texte => action 1
+    p qui contient 5 mots de votre choix
+
+    script 
+        si vous cliquez une première fois sur le bouton 
+        => changer la valeur de attribut data-show="1" => attribut data-show="0" 
+           et masquer le p 
+        
+        si vous recliquez sur le bouton 
+        => changer la valeur de attribut data-show="0" => attribut data-show="1"
+         et afficher le p 
+
+    bouton toggle => action reclique inverse de l'action 
+-->
