@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Action 1</button>
+    <button>Action 2</button>
+    <button>Action 3</button>
+    <button>Action 4</button>
+    <script>
+        const btn = document.querySelectorAll("button") ;
+
+        // déclencher des instructions suite au click sur le 1er bouton => écrire "bonjour action 1" dans la console
+        // callback => fonction de rappel => mettre une fonction comme argument d'une autre fonction qui est exécutée 
+        // version actuelle => DOM 2
+        btn[0].addEventListener("click", function(){ 
+            console.log(`bonjour action 1`);
+        })
+
+        // autre manière de faire du DOM 2 
+        // créer la fonction AVANT le eventListener
+        function action2(){
+            console.log(`bonjour action 2`);
+        }
+        btn[1].addEventListener("click" , action2 ) ; 
+        // dans le 2ème paramètre juste le nom de la fonction 
+        // => pas de "action2" // pas de action2()
+
+        // Ancienne manière DOM fonction anonyme
+        btn[2].onclick = function(){
+            console.log(`bonjour action 3`);
+        }
+
+        // Ancienne manière DOM fonction fléchée
+        btn[3].onclick = () => {
+            console.log(`bonjour action 4`);
+        }
+
+    </script>
+    <h2>la plus ancienne méthode (et utilisée dans React / React Native) </h2>
+    <button class="first" onclick="action5()">Action 5</button>
+    <button class="deux">Action 5 bis</button>
+    <script>
+        function action5(){
+            console.log(`bonjour action 5`);
+        }
+
+        document.querySelector(".deux").setAttribute("onclick" , "action5()");
+        // HTML , le CSS et le javascript sont des langages clients (exécutés par le navigateur )
+        // leur code source est accessible dans le nagivateur 
+        // il est possible de le modifier via le navigateur (sans éditeur de texte )
+        // attention les modifications en html et css sont stockées DANS la navigateur et si vous réalisez un update en HTML CSS
+        // ATTENTION il ne faut pas mettre d'information sensible dans le html / css / js => mot de passe  jamais
+        // côté navigateur => mettre des vérifications
+        // NodeJS => (back)=> il faut OBLIGATOIREMENT effectuer des vérifications avant de traiter les requêtes transmises par des clients 
+    </script>
+</body>
+</html>
