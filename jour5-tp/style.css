@@ -1,0 +1,50 @@
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    width: 1200px;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* 
+menu
+*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+header ul li:not(:first-child){
+    margin-left: 15px;
+}
+
+/* 
+onglet 
+*/
+.onglet{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 0 0 20px 0;
+}
+
+.onglet button{
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+
+.onglet div:not(:first-of-type){
+    display: none;
+}
