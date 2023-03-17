@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>show</button>
+    <img src="https://via.placeholder.com/400x200" alt="">
+    <script>
+        document.querySelector("button").addEventListener("click", function(){
+            if(this.innerText === "show"){
+                this.innerText = "hide";
+            }else {
+                this.innerText = "show";
+            }
+        })
+        document.querySelector("img").addEventListener("click" , function(){
+            console.log(this.getAttribute("src")); 
+        })
+    </script>
+</body>
+</html>
