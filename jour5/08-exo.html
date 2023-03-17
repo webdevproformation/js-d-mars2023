@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="sujet" placeholder="sujet">
+        <input type="number" id="duree" placeholder="saisir duree">
+        <select name="pays" id="pays">
+            <option value="france">france</option>
+            <option value="allemagne">allemagne</option>
+            <option value="belgique">belgique</option>
+        </select>
+        <input type="submit" class="envoyer">
+    </form>
+    <div></div>
+    <script>
+        document.querySelector(".envoyer").addEventListener("click", function(e){
+            e.preventDefault();
+            const sujet = document.querySelector("#sujet").value ;
+            const duree = document.querySelector("#duree").value ;  
+            const pays = document.querySelector("#pays").value ;  
+            document.querySelector("div").innerHTML += `<p>j'ai étudié ${sujet} pendant ${duree} ans en ${pays} </p>`
+
+            document.querySelector("form").reset(); 
+        })     
+    </script>
+</body>
+</html>
