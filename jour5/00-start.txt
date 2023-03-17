@@ -1,0 +1,13 @@
+js initiation 
+
+https://formation.webdevpro.net/js-initiation/ (dans la barre d'adresse pas sur google)
+login : js
+mot de passe : initiation 
+
+-------------------------
+
+js dom 
+https://formation.webdevpro.net/js-dom
+login : js 
+password : web 
+
