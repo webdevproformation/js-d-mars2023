@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="hello" class="tutu titi">Action 1 coucou les amis</button>
+    <button>Action 2</button>
+    <button>Action 3</button>
+    <button>1</button>
+    <button>2</button>
+    <script>
+        const btn = document.querySelectorAll("button");
+        // si je clique sur le 1er bouton => console.log("Action 1")
+        // utilisation de this 
+        btn[0].addEventListener("click" , function(){
+            console.log(this.innerText);
+            console.log(this.getAttribute("id"));
+            console.log(this.id);                   // équivalent ligne précédente
+            console.log(this.getAttribute("class"));
+            console.log(this.classList.value);      // équivalent ligne précédente
+            console.log(this.classList[0]); // le 1er => tutu
+        })
+
+        // attention là ça ne fonctionne pas 
+        // attention le callback qui contient une instruction avec le mot clé this ne fonctionne pas 
+
+        btn[1].addEventListener("click" , () => {
+            console.log(this.innerText);
+            console.log(this.getAttribute("id"));
+            console.log(this.id);                   // équivalent ligne précédente
+            console.log(this.getAttribute("class"));
+            console.log(this.classList.value);      // équivalent ligne précédente
+            console.log(this.classList[0]); // le 1er => tutu
+        })
+
+        function calcul(a, b){
+            console.log(a + b);
+        }
+
+        btn[2].addEventListener("click" , function(){
+            calcul(2, 3); 
+        })
+
+    </script>
+    <img src="https://via.placeholder.com/200x50" alt="">
+    <script>
+        document.querySelector("img").addEventListener("click" , function(){ 
+
+        })
+    </script>
+</body>
+</html>
+<!-- 
+    créer le fichier 04-exo.html 
+
+    créer une image 
+    <button>show</button>
+    <img src="https://via.placeholder.com/200x50" alt="">
+
+    suivi d'une balise script 
+    si vous cliquez sur le bouton => changer le texte du bouton par hide
+    si je reclique sur le boutin => changer hide => show
+
+    si je clique sur l'image => afficher dans la console du navigeur la valeur de son attribut src 
+
+-->
