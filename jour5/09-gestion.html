@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 1000px;
+            max-width: 90%;
+            margin: 0 auto;
+            font-family: sans-serif;
+        }
+        form{
+            margin-top: 20px;
+            display: grid;
+            gap : 10px
+        }
+        #titre , #contenu , #envoyer{
+            padding: 5px 8px;
+        }
+        #envoyer{
+            justify-self: start;
+            cursor: pointer;
+            background: #3498db; /* https://flatuicolors.com/ */
+            border: none;
+            color:white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="titre" placeholder="saisir le titre">
+        <textarea id="contenu" rows="10" placeholder="saisir le contenu"></textarea>
+        <input type="submit" id="envoyer">
+        <!-- 2  == "2" true // 2 === "2"  -->
+    </form>
+    <section>
+        <h2>liste d'articles</h2>
+        <div></div>
+    </section>
+    <script>
+        // gestion du formulaire d'ajout
+        let compteur = 0 ;
+        document.querySelector("form").addEventListener("submit", function(e){
+            e.preventDefault(); 
+            const titre = document.querySelector("#titre").value ;
+            const contenu = document.querySelector("#contenu").value ;
+            // est ce que les deux champs sont bien remplis ?? 
+            // si l'un ou l'autre des champs est vides => stop avec un message
+            if(titre === "" || contenu === ""){
+                alert("attention veuillez remplir les deux champs ");
+                return ;  // stopper l'exécution du callback  
+            }
+            
+            document.querySelector("div").innerHTML += `
+                <article data-article="article-${compteur}">
+                    <h2>${titre}</h2>
+                    <p>${contenu}</p>
+                    <button>supprimer</button>
+                    <button onclick="supprimerArticle(this)">supprimer 2</button>
+                    <button onclick="supprimer(this)" data-id="article-${compteur}">supprimer 3</button>
+                    <hr>  
+                </article>
+            `;
+            compteur++ ;
+            // requete ajax => envoyer les données à un serveur (base de données MongoDB)
+            // persistance => sur un disque DUR 
+            this.reset(); // vider le formulaire 
+        })
+
+        function supprimer(balise){
+            const id = balise.dataset.id;
+            document.querySelector(`[data-article="${id}"]`).remove()
+        }
+
+        function supprimerArticle(balise){
+            balise.closest("article").remove();
+        }
+
+        // quand on clique sur un bouton supprimer 
+        // MAIS le bouton supprimer est ajouté via du JS 
+        // je ne peux pas utiliser document.querySelectorAll("button")
+        // écouter quand on clique sur la balise div qui contient un <article> qui contient <button>
+
+        document.querySelector("div").addEventListener("click", function(e){
+            // e evenement => information du l'evènement déclenché {  }
+            console.log(e)
+            console.log(e.target) // où j'ai cliqué dans la div 
+            
+            // document.querySelector("div") body > div (balise dans une  autre )
+            // e.target.closest button > button > article (inverse de querySelector) balise qui contient une autre 
+            if(e.target.nodeName === "BUTTON" && e.target.nodeName.innerText === "supprimer"){
+                e.target.closest("article").remove();
+            }
+        })   
+
+    </script>
+</body>
+</html>
